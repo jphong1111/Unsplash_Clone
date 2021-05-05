@@ -15,9 +15,5 @@ class StartViewController: UIViewController {
     }
 
     @IBAction private func showMainMenu(_ sender: UIButton) {
-        
     }
-
-
 }
-
