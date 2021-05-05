@@ -41,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				95F00427264298BF004E85CF /* Unsplah_Clone */,
-				95F00426264298BF004E85CF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,20 +50,46 @@
 				95F00425264298BF004E85CF /* Unsplah_Clone.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		95F00427264298BF004E85CF /* Unsplah_Clone */ = {
 			isa = PBXGroup;
 			children = (
-				95F00428264298BF004E85CF /* AppDelegate.swift */,
-				95F0042A264298BF004E85CF /* SceneDelegate.swift */,
-				95F0042C264298BF004E85CF /* ViewController.swift */,
-				95F0042E264298BF004E85CF /* Main.storyboard */,
+				95F0043F264298FC004E85CF /* Module */,
+				95F00426264298BF004E85CF /* Products */,
+				95F0043D264298DB004E85CF /* Common */,
 				95F00431264298C4004E85CF /* Assets.xcassets */,
-				95F00433264298C4004E85CF /* LaunchScreen.storyboard */,
-				95F00436264298C4004E85CF /* Info.plist */,
+				95F0043E264298E7004E85CF /* Storyboard */,
 			);
 			path = Unsplah_Clone;
+			sourceTree = "<group>";
+		};
+		95F0043D264298DB004E85CF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				95F00428264298BF004E85CF /* AppDelegate.swift */,
+				95F00436264298C4004E85CF /* Info.plist */,
+				95F0042A264298BF004E85CF /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		95F0043E264298E7004E85CF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				95F0042E264298BF004E85CF /* Main.storyboard */,
+				95F00433264298C4004E85CF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		95F0043F264298FC004E85CF /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				95F0042C264298BF004E85CF /* ViewController.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Unsplah_Clone/Info.plist;
+				INFOPLIST_FILE = Unsplah_Clone/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Unsplah_Clone/Info.plist;
+				INFOPLIST_FILE = Unsplah_Clone/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
