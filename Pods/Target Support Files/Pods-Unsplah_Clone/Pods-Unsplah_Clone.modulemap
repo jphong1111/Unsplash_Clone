@@ -1,0 +1,6 @@
+framework module Pods_Unsplah_Clone {
+  umbrella header "Pods-Unsplah_Clone-umbrella.h"
+
+  export *
+  module * { export * }
+}
