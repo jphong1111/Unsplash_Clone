@@ -28,7 +28,8 @@ Used API for this project
 Third Party Library for this project
 
 - [SDWebImage](https://github.com/SDWebImage/SDWebImage)
-- [Firebase] & [Firestore](https://firebase.google.com/docs/ios/setup)
+- [Firebase](https://firebase.google.com/docs/ios/setup)
+ & [Firestore](https://firebase.google.com/docs/ios/setup)
 
 ## Sources
 
