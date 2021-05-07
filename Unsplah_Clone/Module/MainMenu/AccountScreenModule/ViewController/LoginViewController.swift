@@ -10,8 +10,16 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var passwordTextfield: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField! {
+        didSet {
+            StringColor.changeColor(textField: emailTextField, text: "Email", color: .gray)
+        }
+    }
+    @IBOutlet private weak var passwordTextfield: UITextField! {
+        didSet {
+            StringColor.changeColor(textField: passwordTextfield, text: "Password", color: .gray)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
