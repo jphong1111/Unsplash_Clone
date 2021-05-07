@@ -3,7 +3,7 @@ Make a clone of Unsplash App with using Unsplash api. Integrate Firebase to make
 
 ## LogIn Screen
 
-<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/logInScreen.png" width = "200" height = "410"
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/logInScreen.png" width = "200" height = "410" />
 
 ## IDE
 
