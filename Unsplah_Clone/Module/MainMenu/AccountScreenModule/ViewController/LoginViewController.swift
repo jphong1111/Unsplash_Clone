@@ -21,6 +21,12 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBOutlet private weak var logInContainer: UIView! {
+        didSet {
+            ReusableComponent.addRadiusForButton(logInContainer)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

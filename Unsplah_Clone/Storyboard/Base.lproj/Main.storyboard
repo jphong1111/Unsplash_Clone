@@ -161,20 +161,33 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9v-nJ-4gk">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EO-a4-lVJ">
                                 <rect key="frame" x="20" y="337" width="374" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9v-nJ-4gk">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3nN-u2-DRq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="RUb-wi-oMR" eventType="touchUpInside" id="g9w-NF-DCH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Lbt-98-PDf"/>
+                                    <constraint firstItem="b9v-nJ-4gk" firstAttribute="top" secondItem="9EO-a4-lVJ" secondAttribute="top" id="AYo-xC-k9e"/>
+                                    <constraint firstAttribute="height" constant="40" id="R5R-lv-Ell"/>
+                                    <constraint firstAttribute="bottom" secondItem="b9v-nJ-4gk" secondAttribute="bottom" id="j8i-u3-yit"/>
+                                    <constraint firstAttribute="trailing" secondItem="b9v-nJ-4gk" secondAttribute="trailing" id="rUb-kz-cB4"/>
+                                    <constraint firstItem="b9v-nJ-4gk" firstAttribute="leading" secondItem="9EO-a4-lVJ" secondAttribute="leading" id="vpy-YE-ljL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginPressed:" destination="RUb-wi-oMR" eventType="touchUpInside" id="g9w-NF-DCH"/>
-                                </connections>
-                            </button>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjp-YC-5ws">
                                 <rect key="frame" x="128.5" y="407" width="157" height="30"/>
                                 <state key="normal" title="Forgot your password?">
@@ -209,17 +222,17 @@
                             <constraint firstItem="Bf3-Du-9fM" firstAttribute="top" secondItem="URm-Fh-UFE" secondAttribute="bottom" constant="35" id="1KL-GY-MYE"/>
                             <constraint firstItem="3eE-X7-Orp" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="URm-Fh-UFE" secondAttribute="trailing" constant="20" id="BIA-hy-9RO"/>
                             <constraint firstItem="zUH-uF-D2p" firstAttribute="leading" secondItem="b3s-f9-yEo" secondAttribute="leading" constant="20" id="C0t-AC-BRI"/>
+                            <constraint firstItem="Wjp-YC-5ws" firstAttribute="top" secondItem="9EO-a4-lVJ" secondAttribute="bottom" constant="30" id="DDr-HX-21B"/>
                             <constraint firstItem="URm-Fh-UFE" firstAttribute="leading" secondItem="3eE-X7-Orp" secondAttribute="leading" constant="20" id="FIq-C4-MLx"/>
                             <constraint firstItem="zUH-uF-D2p" firstAttribute="top" secondItem="Bf3-Du-9fM" secondAttribute="bottom" constant="30" id="FQs-z2-Vx6"/>
                             <constraint firstItem="3eE-X7-Orp" firstAttribute="trailing" secondItem="Bf3-Du-9fM" secondAttribute="trailing" constant="20" id="IgA-Pk-rlb"/>
-                            <constraint firstItem="3eE-X7-Orp" firstAttribute="trailing" secondItem="b9v-nJ-4gk" secondAttribute="trailing" constant="20" id="PRO-EW-SpX"/>
                             <constraint firstItem="3eE-X7-Orp" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="M4G-In-UN8" secondAttribute="bottom" constant="20" id="QaW-Ob-xXS"/>
                             <constraint firstItem="3eE-X7-Orp" firstAttribute="trailing" secondItem="zUH-uF-D2p" secondAttribute="trailing" constant="20" id="S0M-Ki-kcR"/>
-                            <constraint firstItem="Wjp-YC-5ws" firstAttribute="top" secondItem="b9v-nJ-4gk" secondAttribute="bottom" constant="30" id="c7z-LD-Cz6"/>
-                            <constraint firstItem="b9v-nJ-4gk" firstAttribute="leading" secondItem="3eE-X7-Orp" secondAttribute="leading" constant="20" id="eGd-hy-iHS"/>
+                            <constraint firstItem="9EO-a4-lVJ" firstAttribute="top" secondItem="zUH-uF-D2p" secondAttribute="bottom" constant="40" id="dK9-tX-kjB"/>
                             <constraint firstItem="Bf3-Du-9fM" firstAttribute="leading" secondItem="3eE-X7-Orp" secondAttribute="leading" constant="20" id="eZ4-cP-ky3"/>
+                            <constraint firstItem="9EO-a4-lVJ" firstAttribute="leading" secondItem="3eE-X7-Orp" secondAttribute="leading" constant="20" id="hwo-6u-9OT"/>
+                            <constraint firstItem="3eE-X7-Orp" firstAttribute="trailing" secondItem="9EO-a4-lVJ" secondAttribute="trailing" constant="20" id="iin-Cf-6IY"/>
                             <constraint firstItem="Wjp-YC-5ws" firstAttribute="centerX" secondItem="b3s-f9-yEo" secondAttribute="centerX" id="jKY-cX-d5Q"/>
-                            <constraint firstItem="b9v-nJ-4gk" firstAttribute="top" secondItem="zUH-uF-D2p" secondAttribute="bottom" constant="40" id="my7-1m-Pz0"/>
                             <constraint firstItem="M4G-In-UN8" firstAttribute="centerX" secondItem="b3s-f9-yEo" secondAttribute="centerX" id="nz3-XP-7ro"/>
                             <constraint firstItem="URm-Fh-UFE" firstAttribute="top" secondItem="3eE-X7-Orp" secondAttribute="top" constant="20" id="rIC-CW-19M"/>
                             <constraint firstItem="M4G-In-UN8" firstAttribute="top" secondItem="Wjp-YC-5ws" secondAttribute="bottom" constant="35" id="uXC-nN-cbt"/>
@@ -228,6 +241,7 @@
                     <navigationItem key="navigationItem" id="2ND-Id-tTY"/>
                     <connections>
                         <outlet property="emailTextField" destination="tyT-dW-WdJ" id="mFq-uC-Ma2"/>
+                        <outlet property="logInContainer" destination="9EO-a4-lVJ" id="Kvf-af-g23"/>
                         <outlet property="passwordTextfield" destination="uqW-yd-Ru5" id="owX-Hg-XTx"/>
                     </connections>
                 </viewController>
