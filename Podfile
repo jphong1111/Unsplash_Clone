@@ -7,4 +7,6 @@ target 'Unsplah_Clone' do
 
   # Pods for Unsplah_Clone
 pod 'SDWebImage'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 end
