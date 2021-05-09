@@ -23,4 +23,7 @@ class UploadViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
     }
+    
+    @IBAction private func contributeImage(_ sender: UIButton) {
+    }
 }
