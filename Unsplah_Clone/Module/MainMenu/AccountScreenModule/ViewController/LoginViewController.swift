@@ -46,10 +46,10 @@ class LoginViewController: UIViewController {
                     Auth.auth().signIn(withEmail: email, password: password) { _, error in
                         if let error = error {
                             print(error)
-                            let alert = UIAlertController(title: "Login Error", message: "Password or ID is invalid try again", preferredStyle: .alert)
-                            let alertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                            alert.addAction(alertAction)
+                            let alert = ReusableComponent.alertMessage(title: "Login Error", message: "Password or ID is invalid try again")
                             self.present(alert, animated: true, completion: nil)
+                        } else {
+                            self.performSegue(withIdentifier: "CompleteLogIn", sender: nil)
                         }
                     }
                 }

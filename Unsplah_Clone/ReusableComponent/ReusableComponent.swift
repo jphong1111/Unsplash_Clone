@@ -16,6 +16,16 @@ enum ReusableComponent {
         view.layer.cornerRadius = 5
         view.layer.masksToBounds = true
     }
+    static func alertMessage(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(alertAction)
+        return alert
+    }
+    static func linkToUrl(url: String) {
+        guard let url = URL(string: url), UIApplication.shared.canOpenURL(url) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 }
 
 protocol CellReusable {
