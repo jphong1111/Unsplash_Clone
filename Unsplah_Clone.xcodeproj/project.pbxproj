@@ -24,7 +24,10 @@
 		95AE9ECF26472BE8002D956F /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9ECE26472BE8002D956F /* ResetViewController.swift */; };
 		95AE9ED226473361002D956F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9ED126473361002D956F /* RegisterViewModel.swift */; };
 		95AE9ED626479305002D956F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9ED526479305002D956F /* AccountViewController.swift */; };
-		95AE9ED92647BB3F002D956F /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9ED82647BB3F002D956F /* AccountViewModel.swift */; };
+		95AE9EDD2647BE47002D956F /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9EDC2647BE47002D956F /* UploadViewController.swift */; };
+		95AE9EE22647BE5E002D956F /* UploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9EE12647BE5E002D956F /* UploadViewModel.swift */; };
+		95AE9EE62647BEE9002D956F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AE9EE52647BEE9002D956F /* Login.storyboard */; };
+		95AE9EED2647C794002D956F /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9EEC2647C794002D956F /* AccountViewModel.swift */; };
 		95F00429264298BF004E85CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F00428264298BF004E85CF /* AppDelegate.swift */; };
 		95F0042B264298BF004E85CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0042A264298BF004E85CF /* SceneDelegate.swift */; };
 		95F0042D264298BF004E85CF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0042C264298BF004E85CF /* StartViewController.swift */; };
@@ -54,7 +57,10 @@
 		95AE9ECE26472BE8002D956F /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		95AE9ED126473361002D956F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		95AE9ED526479305002D956F /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		95AE9ED82647BB3F002D956F /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountViewModel.swift; path = ../../../../../../../../AccountViewModel.swift; sourceTree = "<group>"; };
+		95AE9EDC2647BE47002D956F /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		95AE9EE12647BE5E002D956F /* UploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewModel.swift; sourceTree = "<group>"; };
+		95AE9EE52647BEE9002D956F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		95AE9EEC2647C794002D956F /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		95F00425264298BF004E85CF /* Unsplah_Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplah_Clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F00428264298BF004E85CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95F0042A264298BF004E85CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 		95AE9E8B26459847002D956F /* UploadScreenModule */ = {
 			isa = PBXGroup;
 			children = (
+				95AE9EE02647BE4B002D956F /* ViewModel */,
+				95AE9EDB2647BE32002D956F /* ViewController */,
 			);
 			path = UploadScreenModule;
 			sourceTree = "<group>";
@@ -212,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				95AE9ED126473361002D956F /* RegisterViewModel.swift */,
-				95AE9ED82647BB3F002D956F /* AccountViewModel.swift */,
+				95AE9EEC2647C794002D956F /* AccountViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -224,6 +232,22 @@
 				95AE9ECB2645E448002D956F /* StringColor.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		95AE9EDB2647BE32002D956F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				95AE9EDC2647BE47002D956F /* UploadViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		95AE9EE02647BE4B002D956F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95AE9EE12647BE5E002D956F /* UploadViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		95F0041C264298BF004E85CF = {
@@ -273,6 +297,7 @@
 			children = (
 				95F0042E264298BF004E85CF /* Main.storyboard */,
 				95F00433264298C4004E85CF /* LaunchScreen.storyboard */,
+				95AE9EE52647BEE9002D956F /* Login.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -376,6 +401,7 @@
 			files = (
 				95F00435264298C4004E85CF /* LaunchScreen.storyboard in Resources */,
 				95F00432264298C4004E85CF /* Assets.xcassets in Resources */,
+				95AE9EE62647BEE9002D956F /* Login.storyboard in Resources */,
 				95F00430264298BF004E85CF /* Main.storyboard in Resources */,
 				95AE9E9726459BD3002D956F /* MainMenuTableViewFirstCell.xib in Resources */,
 				95AE9EC22645D07E002D956F /* GoogleService-Info.plist in Resources */,
@@ -453,14 +479,16 @@
 				95AE9E9426459B19002D956F /* MainMenuViewController.swift in Sources */,
 				95AE9EA126459DB4002D956F /* MainMenuTableViewSecondViewModel.swift in Sources */,
 				95AE9ED226473361002D956F /* RegisterViewModel.swift in Sources */,
-				95AE9ED92647BB3F002D956F /* AccountViewModel.swift in Sources */,
 				95AE9EBE2645C910002D956F /* RegisterViewController.swift in Sources */,
 				95AE9ECF26472BE8002D956F /* ResetViewController.swift in Sources */,
+				95AE9EED2647C794002D956F /* AccountViewModel.swift in Sources */,
 				95AE9EC82645DCD9002D956F /* Color.swift in Sources */,
 				95F0042D264298BF004E85CF /* StartViewController.swift in Sources */,
 				95AE9ED626479305002D956F /* AccountViewController.swift in Sources */,
+				95AE9EDD2647BE47002D956F /* UploadViewController.swift in Sources */,
 				95F00429264298BF004E85CF /* AppDelegate.swift in Sources */,
 				95F0042B264298BF004E85CF /* SceneDelegate.swift in Sources */,
+				95AE9EE22647BE5E002D956F /* UploadViewModel.swift in Sources */,
 				95AE9ECC2645E448002D956F /* StringColor.swift in Sources */,
 				95AE9EA426459FBA002D956F /* MainMenuViewModel.swift in Sources */,
 				95AE9EB02645A3C3002D956F /* MainMenuTableViewSecondCell.swift in Sources */,

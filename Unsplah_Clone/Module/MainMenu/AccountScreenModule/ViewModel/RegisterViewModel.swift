@@ -20,7 +20,7 @@ class RegisterViewModel {
                 } else {
                     print("Create Success")
                     guard let firstName = firstName.text, let lastName = lastName.text, let userName = userName.text else { fatalError("user info invalid") }
-                    self.db.collection("users").addDocument(data: ["firstName": firstName, "lastName": lastName, "userName": userName]) { error in
+                    self.db.collection("users").addDocument(data: ["firstName": firstName, "lastName": lastName, "userName": userName, "Date": Date().timeIntervalSince1970]) { error in
                         if error != nil {
                             print("data store error")
                         }
