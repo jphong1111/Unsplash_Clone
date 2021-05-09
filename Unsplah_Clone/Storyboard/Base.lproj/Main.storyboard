@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="width" constant="384" id="X2N-aD-H6w"/>
                                 </constraints>
                                 <state key="normal" image="uploadImage"/>
+                                <connections>
+                                    <action selector="contributeImage:" destination="wB0-m4-BnC" eventType="touchUpInside" id="QcO-YH-ScE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest from the blog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2g-8D-OTR">
                                 <rect key="frame" x="15" y="548.5" width="165" height="20.5"/>
@@ -115,17 +118,36 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kVT-6w-851"/>
+                    <connections>
+                        <segue destination="ebc-nh-Pz0" kind="showDetail" identifier="Contributed" id="VzM-dw-Whi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b23-op-YaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2313.04347826087" y="320.75892857142856"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="Nby-19-GPu">
+            <objects>
+                <viewController id="ebc-nh-Pz0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4j3-bl-Q1T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OOh-si-zfu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4db-MS-aSg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E69-sJ-pZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3159" y="321"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="LL0-1G-w9t">
             <objects>
                 <viewController id="QMp-kt-svg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ex-S3-fsX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="J1z-JF-QW3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -155,6 +177,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="RealBlack"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -171,7 +194,7 @@
                     <navigationItem key="navigationItem" title="Unsplash" id="Oa1-12-TqU">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="OQ7-OH-MWV">
                             <connections>
-                                <segue destination="QMp-kt-svg" kind="show" id="kpS-Hh-ONB"/>
+                                <segue destination="QMp-kt-svg" kind="showDetail" id="kpS-Hh-ONB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -234,7 +257,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-ej-xAL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startImage" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-ej-xAL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="375.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Over a million photos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hR-Xv-Qba">
@@ -309,6 +332,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qOA-Sd-C8q"/>
+                    <connections>
+                        <outlet property="imageView" destination="yAH-ej-xAL" id="hhK-16-hU4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCI-dy-T6A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,10 +444,11 @@
         <image name="first.Screen" width="27" height="26"/>
         <image name="fourth.Screen" width="27" height="26"/>
         <image name="second.Screen" width="27" height="26"/>
+        <image name="startImage" width="834" height="746"/>
         <image name="third.Screen" width="27" height="26"/>
         <image name="uploadImage" width="920" height="948"/>
         <namedColor name="RealBlack">
-            <color red="0.043137254899999998" green="0.043137254899999998" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -28,6 +28,7 @@
 		95AE9EE22647BE5E002D956F /* UploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9EE12647BE5E002D956F /* UploadViewModel.swift */; };
 		95AE9EE62647BEE9002D956F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AE9EE52647BEE9002D956F /* Login.storyboard */; };
 		95AE9EED2647C794002D956F /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9EEC2647C794002D956F /* AccountViewModel.swift */; };
+		95AE9F0426487450002D956F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9F0326487450002D956F /* ImagePicker.swift */; };
 		95F00429264298BF004E85CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F00428264298BF004E85CF /* AppDelegate.swift */; };
 		95F0042B264298BF004E85CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0042A264298BF004E85CF /* SceneDelegate.swift */; };
 		95F0042D264298BF004E85CF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0042C264298BF004E85CF /* StartViewController.swift */; };
@@ -61,6 +62,7 @@
 		95AE9EE12647BE5E002D956F /* UploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewModel.swift; sourceTree = "<group>"; };
 		95AE9EE52647BEE9002D956F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		95AE9EEC2647C794002D956F /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		95AE9F0326487450002D956F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		95F00425264298BF004E85CF /* Unsplah_Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplah_Clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F00428264298BF004E85CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95F0042A264298BF004E85CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,8 +187,8 @@
 		95AE9EA62645A125002D956F /* ReusableComponent */ = {
 			isa = PBXGroup;
 			children = (
+				95AE9F022648742F002D956F /* ReusableComponent */,
 				95AE9EC62645DCCC002D956F /* Color */,
-				95AE9EA72645A13E002D956F /* ReusableComponent.swift */,
 			);
 			path = ReusableComponent;
 			sourceTree = "<group>";
@@ -248,6 +250,15 @@
 				95AE9EE12647BE5E002D956F /* UploadViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		95AE9F022648742F002D956F /* ReusableComponent */ = {
+			isa = PBXGroup;
+			children = (
+				95AE9EA72645A13E002D956F /* ReusableComponent.swift */,
+				95AE9F0326487450002D956F /* ImagePicker.swift */,
+			);
+			path = ReusableComponent;
 			sourceTree = "<group>";
 		};
 		95F0041C264298BF004E85CF = {
@@ -478,6 +489,7 @@
 				95AE9EA82645A13E002D956F /* ReusableComponent.swift in Sources */,
 				95AE9E9426459B19002D956F /* MainMenuViewController.swift in Sources */,
 				95AE9EA126459DB4002D956F /* MainMenuTableViewSecondViewModel.swift in Sources */,
+				95AE9F0426487450002D956F /* ImagePicker.swift in Sources */,
 				95AE9ED226473361002D956F /* RegisterViewModel.swift in Sources */,
 				95AE9EBE2645C910002D956F /* RegisterViewController.swift in Sources */,
 				95AE9ECF26472BE8002D956F /* ResetViewController.swift in Sources */,

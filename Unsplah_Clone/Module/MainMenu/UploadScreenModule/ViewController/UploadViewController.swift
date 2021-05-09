@@ -10,6 +10,7 @@ import UIKit
 class UploadViewController: UIViewController {
 
     let viewModel = UploadViewModel()
+    lazy var imagePicker = ImagePicker(presentationController: self, delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +26,10 @@ class UploadViewController: UIViewController {
     }
     
     @IBAction private func contributeImage(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
+    }
+}
+extension UploadViewController: ImagePickerDelegate {
+    func didSelect(image: UIImage?) {
     }
 }
