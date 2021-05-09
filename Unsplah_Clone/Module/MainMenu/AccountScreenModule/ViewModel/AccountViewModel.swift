@@ -14,16 +14,19 @@ class AccountViewModel {
     
     func getUserName(nameLabel: UILabel) {
         // guard let currentUser = Auth.auth().currentUser?.uid else { return }
-        db.collection("users").order(by: "Date").addSnapshotListener { querySnapshot, error in
+        db.collection("users").addSnapshotListener { querySnapshot, error in
             if let error = error {
                 print(error.localizedDescription)
             } else {
                 if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
-                        if let firstName = data["firstName"] as? String, let lastName = data["lastName"] as? String {
-                            DispatchQueue.main.async {
-                                nameLabel.text = "\(firstName) \(lastName)"
+                        
+                        if let firstName = data["firstName"] as? String, let lastName = data["lastName"] as? String, let userID = data["uid"] as? String {
+                            if userID == Auth.auth().currentUser?.uid {
+                                DispatchQueue.main.async {
+                                    nameLabel.text = "\(firstName) \(lastName)"
+                                }
                             }
                         }
                     }
