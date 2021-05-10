@@ -29,6 +29,8 @@
 		95AE9EE62647BEE9002D956F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AE9EE52647BEE9002D956F /* Login.storyboard */; };
 		95AE9EED2647C794002D956F /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9EEC2647C794002D956F /* AccountViewModel.swift */; };
 		95AE9F0426487450002D956F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9F0326487450002D956F /* ImagePicker.swift */; };
+		95AE9F0926499242002D956F /* SubMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9F0826499242002D956F /* SubMenuViewController.swift */; };
+		95AE9F0C2649958C002D956F /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9F0B2649958C002D956F /* ConversationManager.swift */; };
 		95F00429264298BF004E85CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F00428264298BF004E85CF /* AppDelegate.swift */; };
 		95F0042B264298BF004E85CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0042A264298BF004E85CF /* SceneDelegate.swift */; };
 		95F0042D264298BF004E85CF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0042C264298BF004E85CF /* StartViewController.swift */; };
@@ -63,6 +65,8 @@
 		95AE9EE52647BEE9002D956F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		95AE9EEC2647C794002D956F /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		95AE9F0326487450002D956F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		95AE9F0826499242002D956F /* SubMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuViewController.swift; sourceTree = "<group>"; };
+		95AE9F0B2649958C002D956F /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
 		95F00425264298BF004E85CF /* Unsplah_Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplah_Clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F00428264298BF004E85CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95F0042A264298BF004E85CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,13 +105,6 @@
 				E52BEF0CCCFCA4A46FE83DF7 /* Pods-Unsplah_Clone.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		95AE9E8626459011002D956F /* LoginModule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginModule;
 			sourceTree = "<group>";
 		};
 		95AE9E892645982B002D956F /* ImageScreenModule */ = {
@@ -180,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				95AE9E9326459B19002D956F /* MainMenuViewController.swift */,
+				95AE9F0826499242002D956F /* SubMenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +255,7 @@
 			children = (
 				95AE9EA72645A13E002D956F /* ReusableComponent.swift */,
 				95AE9F0326487450002D956F /* ImagePicker.swift */,
+				95AE9F0B2649958C002D956F /* ConversationManager.swift */,
 			);
 			path = ReusableComponent;
 			sourceTree = "<group>";
@@ -316,7 +315,6 @@
 		95F0043F264298FC004E85CF /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				95AE9E8626459011002D956F /* LoginModule */,
 				95F004412642A454004E85CF /* StartScreen */,
 				95F004482643115E004E85CF /* MainMenu */,
 			);
@@ -496,6 +494,7 @@
 				95AE9EED2647C794002D956F /* AccountViewModel.swift in Sources */,
 				95AE9EC82645DCD9002D956F /* Color.swift in Sources */,
 				95F0042D264298BF004E85CF /* StartViewController.swift in Sources */,
+				95AE9F0926499242002D956F /* SubMenuViewController.swift in Sources */,
 				95AE9ED626479305002D956F /* AccountViewController.swift in Sources */,
 				95AE9EDD2647BE47002D956F /* UploadViewController.swift in Sources */,
 				95F00429264298BF004E85CF /* AppDelegate.swift in Sources */,
@@ -507,6 +506,7 @@
 				95AE9EAD2645A322002D956F /* MainMenuTableViewFirstCell.swift in Sources */,
 				95AE9E9E26459D2B002D956F /* MainMenuTableViewFirstViewModel.swift in Sources */,
 				95AE9EB72645C8D6002D956F /* LoginViewController.swift in Sources */,
+				95AE9F0C2649958C002D956F /* ConversationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
