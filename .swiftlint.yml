@@ -81,7 +81,6 @@ opt_in_rules:
 - literal_expression_end_indentation
 - lower_acl_than_parent
 - mark
-- missing_docs
 - modifier_order
 - multiline_function_chains
 - multiline_literal_brackets
