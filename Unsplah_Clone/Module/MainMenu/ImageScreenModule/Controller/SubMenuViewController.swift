@@ -53,6 +53,7 @@ class SubMenuViewController: UIViewController {
     @IBAction private func signOut(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
         } catch {
             print("already logged out")
         }

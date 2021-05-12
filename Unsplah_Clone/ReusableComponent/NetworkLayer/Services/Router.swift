@@ -9,14 +9,13 @@ import Foundation
 
 typealias NetworkRouterCompletion<T> = (Result<T, AppError>) -> Void
 
-protocol NetworkRouter: AnyObject {
-    func request<T: Decodable>(_ route: EndPoint, completion: @escaping NetworkRouterCompletion<T>)
-    func cancel()
-}
-
-class Router<U: EndPoint>: NetworkRouter {
-    private let session = URLSession(configuration: .default)
+class Router<EndPoint: EndPointType>: NetworkRouter {
     private var task: URLSessionTask?
+    private let session = URLSession(configuration: .default)
+    
+    func cancel() {
+        self.task?.cancel()
+    }
     
     func request<T: Decodable>(_ route: EndPoint, completion: @escaping NetworkRouterCompletion<T>) {
         do {
@@ -58,9 +57,7 @@ class Router<U: EndPoint>: NetworkRouter {
         }
         self.task?.resume()
     }
-    func cancel() {
-        self.task?.cancel()
-    }
+    
     private func buildRequest(from route: EndPoint) throws -> URLRequest {
         var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
@@ -70,20 +67,17 @@ class Router<U: EndPoint>: NetworkRouter {
             switch route.task {
             case .request:
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            case let .requestParameters(bodyParameters,
-                                        bodyEncoding,
-                                        urlParameters):
+                
+            case .requestParameters(let (bodyParameters, urlParameters)):
                 try self.configureParameters(bodyParameters: bodyParameters,
-                                             bodyEncoding: bodyEncoding,
                                              urlParameters: urlParameters,
                                              request: &request)
-            case let .requestParametersAndHeaders(bodyParameters,
-                                                  bodyEncoding,
+                
+            case .requestParametersAndHeaders(let (bodyParameters,
                                                   urlParameters,
-                                                  additionalHeaders):
+                                                  additionalHeaders)):
                 self.addAdditionalHeaders(additionalHeaders, request: &request)
                 try self.configureParameters(bodyParameters: bodyParameters,
-                                             bodyEncoding: bodyEncoding,
                                              urlParameters: urlParameters,
                                              request: &request)
             }
@@ -92,18 +86,22 @@ class Router<U: EndPoint>: NetworkRouter {
             throw error
         }
     }
+    
     private func configureParameters(bodyParameters: Parameters?,
-                                     bodyEncoding: ParameterEncoding,
                                      urlParameters: Parameters?,
                                      request: inout URLRequest) throws {
         do {
-            try bodyEncoding.encode(urlRequest: &request,
-                                    bodyParameters: bodyParameters,
-                                    urlParameters: urlParameters)
+            if let bodyParameters = bodyParameters {
+                try JSONParameterEncoder.encode(urlRequest: &request, with: bodyParameters)
+            }
+            if let urlParameters = urlParameters {
+                try URLParameterEncoder.encode(urlRequest: &request, with: urlParameters)
+            }
         } catch {
             throw error
         }
     }
+    
     private func addAdditionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
         guard let headers = additionalHeaders else { return }
         for (key, value) in headers {

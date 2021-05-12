@@ -99,7 +99,6 @@ opt_in_rules:
 - orphaned_doc_comment
 - overridden_super_call
 - override_in_extension
-- pattern_matching_keywords
 - prefer_self_type_over_type_of_self
 - prefer_zero_over_explicit_init
 - private_action

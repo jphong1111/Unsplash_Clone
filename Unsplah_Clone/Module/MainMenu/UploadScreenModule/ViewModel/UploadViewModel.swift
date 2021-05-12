@@ -51,4 +51,8 @@ class UploadViewModel {
         cell.configure(configurator: photo)
         return cell
     }
+    func linkedToBlog(for indexPath: IndexPath) {
+        let blogLink = self.latestPhoto(at: indexPath.row).htmlLink
+        ReusableComponent.linkToUrl(url: blogLink)
+    }
 }

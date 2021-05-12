@@ -45,6 +45,11 @@ extension UploadViewController: UICollectionViewDataSource {
         viewModel.configureCell(in: collectionView, for: indexPath)
     }
 }
+extension UploadViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.linkedToBlog(for: indexPath)
+    }
+}
 
 extension UploadViewController: UploadViewModelDelegate {
     func reload() {
@@ -54,9 +59,6 @@ extension UploadViewController: UploadViewModelDelegate {
     func show(error: AppError) {
         self.present(ReusableComponent.alertMessage(title: "Network Error", message: "Check your WIFI connection"), animated: true)
     }
-}
-
-extension UploadViewController: UICollectionViewDelegate {
 }
 
 extension UploadViewController: ImagePickerDelegate {

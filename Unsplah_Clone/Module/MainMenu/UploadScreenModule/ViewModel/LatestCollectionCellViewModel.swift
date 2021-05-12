@@ -11,6 +11,7 @@ protocol LatestCollectionCellViewModelProtocol {
     var imageView: String { get }
     var title: String { get }
     var author: String { get }
+    var htmlLink: String { get }
 }
 
 class LatestCollectionCellViewModel: LatestCollectionCellViewModelProtocol {
@@ -25,10 +26,13 @@ class LatestCollectionCellViewModel: LatestCollectionCellViewModelProtocol {
     }
     
     var title: String {
-        latestPhoto.description.capitalized
+        latestPhoto.description?.capitalized ?? " "
     }
     
     var author: String {
         latestPhoto.user.name
+    }
+    var htmlLink: String {
+        latestPhoto.links.html
     }
 }

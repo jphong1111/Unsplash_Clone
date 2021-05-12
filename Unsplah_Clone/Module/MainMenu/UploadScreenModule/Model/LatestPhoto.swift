@@ -7,10 +7,8 @@
 
 import Foundation
 
-// https://api.unsplash.com/photos/?client_id=2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU
-
 struct LatestPhoto: Decodable {
-    let description: String
+    let description: String?
     let urls: Urls
     let links: Link
     let user: User

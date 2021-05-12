@@ -7,27 +7,35 @@
 
 import Foundation
 
-// enum PhotoAPI {
-//    case photos
-//    case collections
-// }
-
-enum PhotoAPI: EndPoint {
+enum PhotoAPI {
+    case collections
     case photo
-    
+    case searchPhoto(query: String, page: String)
+}
+
+extension PhotoAPI: EndPointType {
     var path: String {
         switch self {
+        case .collections:
+            return "collections/"
         case .photo:
-            return ""
+            return "photos/"
+        case .searchPhoto(let query, let page):
+            return "search/photos"
         }
     }
-    var baseURL: URL {
-        guard let url = URL(string: "https://api.unsplash.com/photos/?client_id=2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU") else {
-            fatalError("Bad Base Url")
-        }
-        return url
-    }
+    
     var task: HTTPTask {
-        .request
+        switch self {
+        case .collections:
+            return .requestParameters((bodyParameters: nil,
+                                       urlParameters: ["client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            
+        case .photo:
+            return .requestParameters((bodyParameters: nil, urlParameters: ["client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            
+        case .searchPhoto(let query, let page):
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+        }
     }
 }

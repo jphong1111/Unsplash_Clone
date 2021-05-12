@@ -14,9 +14,16 @@
 		95986016264A4B0500C0C73C /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986015264A4B0500C0C73C /* HTTPTask.swift */; };
 		9598601C264A4B3000C0C73C /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598601B264A4B3000C0C73C /* NetworkResponse.swift */; };
 		9598601F264A4B4F00C0C73C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598601E264A4B4F00C0C73C /* Router.swift */; };
-		95986022264A4B6800C0C73C /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986021264A4B6800C0C73C /* EndPoint.swift */; };
+		95986022264A4B6800C0C73C /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986021264A4B6800C0C73C /* EndPointType.swift */; };
 		95986025264A4B9100C0C73C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986024264A4B9100C0C73C /* AppError.swift */; };
 		95986028264A548300C0C73C /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986027264A548300C0C73C /* PhotoAPI.swift */; };
+		95986035264AF0C500C0C73C /* PhotoTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986034264AF0C500C0C73C /* PhotoTopic.swift */; };
+		95986039264AFC1E00C0C73C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986038264AFC1E00C0C73C /* SearchViewModel.swift */; };
+		95986043264AFDA000C0C73C /* SearchTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986042264AFDA000C0C73C /* SearchTableViewCellViewModel.swift */; };
+		95986048264B143F00C0C73C /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986047264B143F00C0C73C /* SearchAPI.swift */; };
+		9598604E264B1A8E00C0C73C /* SearchPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598604D264B1A8E00C0C73C /* SearchPhoto.swift */; };
+		95986054264B1C5800C0C73C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986053264B1C5800C0C73C /* SearchTableViewCell.swift */; };
+		95986058264B92C900C0C73C /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986057264B92C900C0C73C /* NetworkRouter.swift */; };
 		95AE9E9426459B19002D956F /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9E9326459B19002D956F /* MainMenuViewController.swift */; };
 		95AE9E9726459BD3002D956F /* MainMenuTableViewFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AE9E9626459BD3002D956F /* MainMenuTableViewFirstCell.xib */; };
 		95AE9E9B26459CCA002D956F /* MainMenuTableViewSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AE9E9A26459CCA002D956F /* MainMenuTableViewSecondCell.xib */; };
@@ -64,9 +71,16 @@
 		95986015264A4B0500C0C73C /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		9598601B264A4B3000C0C73C /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		9598601E264A4B4F00C0C73C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		95986021264A4B6800C0C73C /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		95986021264A4B6800C0C73C /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		95986024264A4B9100C0C73C /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		95986027264A548300C0C73C /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
+		95986034264AF0C500C0C73C /* PhotoTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTopic.swift; sourceTree = "<group>"; };
+		95986038264AFC1E00C0C73C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		95986042264AFDA000C0C73C /* SearchTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		95986047264B143F00C0C73C /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
+		9598604D264B1A8E00C0C73C /* SearchPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhoto.swift; sourceTree = "<group>"; };
+		95986053264B1C5800C0C73C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		95986057264B92C900C0C73C /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		95AE9E9326459B19002D956F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		95AE9E9626459BD3002D956F /* MainMenuTableViewFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewFirstCell.xib; sourceTree = "<group>"; };
 		95AE9E9A26459CCA002D956F /* MainMenuTableViewSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewSecondCell.xib; sourceTree = "<group>"; };
@@ -161,11 +175,45 @@
 				95986015264A4B0500C0C73C /* HTTPTask.swift */,
 				9598601B264A4B3000C0C73C /* NetworkResponse.swift */,
 				9598601E264A4B4F00C0C73C /* Router.swift */,
-				95986021264A4B6800C0C73C /* EndPoint.swift */,
+				95986021264A4B6800C0C73C /* EndPointType.swift */,
 				95986024264A4B9100C0C73C /* AppError.swift */,
 				95986027264A548300C0C73C /* PhotoAPI.swift */,
+				95986057264B92C900C0C73C /* NetworkRouter.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		95986037264AFC0800C0C73C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95986042264AFDA000C0C73C /* SearchTableViewCellViewModel.swift */,
+				95986038264AFC1E00C0C73C /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9598603C264AFC2700C0C73C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9598604D264B1A8E00C0C73C /* SearchPhoto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95986041264AFCDC00C0C73C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95986053264B1C5800C0C73C /* SearchTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95986046264B143000C0C73C /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				95986047264B143F00C0C73C /* SearchAPI.swift */,
+			);
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 		95AE9E892645982B002D956F /* ImageScreenModule */ = {
@@ -182,6 +230,10 @@
 		95AE9E8A2645983E002D956F /* SearchScreenModule */ = {
 			isa = PBXGroup;
 			children = (
+				95986046264B143000C0C73C /* EndPoint */,
+				9598603C264AFC2700C0C73C /* Model */,
+				95986041264AFCDC00C0C73C /* View */,
+				95986037264AFC0800C0C73C /* ViewModel */,
 				95AE9F0E2649C489002D956F /* ViewController */,
 			);
 			path = SearchScreenModule;
@@ -212,6 +264,7 @@
 		95AE9E8E26459AD2002D956F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				95986034264AF0C500C0C73C /* PhotoTopic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -575,12 +628,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				95AE9EA82645A13E002D956F /* ReusableComponent.swift in Sources */,
+				95986058264B92C900C0C73C /* NetworkRouter.swift in Sources */,
 				95AE9E9426459B19002D956F /* MainMenuViewController.swift in Sources */,
 				9598600B264A4ABB00C0C73C /* ParameterEncoder.swift in Sources */,
 				95AE9EA126459DB4002D956F /* MainMenuTableViewSecondViewModel.swift in Sources */,
+				95986035264AF0C500C0C73C /* PhotoTopic.swift in Sources */,
 				95AE9F192649C8F7002D956F /* LatestCollectionCellViewModel.swift in Sources */,
 				95AE9F0426487450002D956F /* ImagePicker.swift in Sources */,
 				95AE9ED226473361002D956F /* RegisterViewModel.swift in Sources */,
+				95986048264B143F00C0C73C /* SearchAPI.swift in Sources */,
 				95AE9EBE2645C910002D956F /* RegisterViewController.swift in Sources */,
 				9598600E264A4AD000C0C73C /* URLParameterEncoder.swift in Sources */,
 				95AE9ECF26472BE8002D956F /* ResetViewController.swift in Sources */,
@@ -591,7 +647,9 @@
 				95986006264A4A9800C0C73C /* JSONParameterEncoder.swift in Sources */,
 				95AE9ED626479305002D956F /* AccountViewController.swift in Sources */,
 				95AE9F152649C861002D956F /* LatestCollectionViewCell.swift in Sources */,
+				95986039264AFC1E00C0C73C /* SearchViewModel.swift in Sources */,
 				95986025264A4B9100C0C73C /* AppError.swift in Sources */,
+				95986043264AFDA000C0C73C /* SearchTableViewCellViewModel.swift in Sources */,
 				9598601F264A4B4F00C0C73C /* Router.swift in Sources */,
 				95AE9EDD2647BE47002D956F /* UploadViewController.swift in Sources */,
 				95F00429264298BF004E85CF /* AppDelegate.swift in Sources */,
@@ -602,9 +660,11 @@
 				95AE9ECC2645E448002D956F /* StringColor.swift in Sources */,
 				95AE9EA426459FBA002D956F /* MainMenuViewModel.swift in Sources */,
 				95AE9F102649C4A4002D956F /* SearchViewController.swift in Sources */,
+				95986054264B1C5800C0C73C /* SearchTableViewCell.swift in Sources */,
 				95AE9EB02645A3C3002D956F /* MainMenuTableViewSecondCell.swift in Sources */,
 				95AE9EAD2645A322002D956F /* MainMenuTableViewFirstCell.swift in Sources */,
-				95986022264A4B6800C0C73C /* EndPoint.swift in Sources */,
+				9598604E264B1A8E00C0C73C /* SearchPhoto.swift in Sources */,
+				95986022264A4B6800C0C73C /* EndPointType.swift in Sources */,
 				9598601C264A4B3000C0C73C /* NetworkResponse.swift in Sources */,
 				95986016264A4B0500C0C73C /* HTTPTask.swift in Sources */,
 				95AE9E9E26459D2B002D956F /* MainMenuTableViewFirstViewModel.swift in Sources */,
