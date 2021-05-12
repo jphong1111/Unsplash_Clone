@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
             self.tableView.delegate = self
         }
     }
+    @IBOutlet private weak var segmentControl: UISegmentedControl!
     
     lazy var viewModel = SearchViewModel(delegate: self)
     
@@ -35,6 +36,15 @@ class SearchViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
+    }
+    
+    @IBAction private func didChangeSegment(_ sender: UISegmentedControl) {
+        
+        if sender.selectedSegmentIndex == 0 {
+            viewModel.fetchPhotoDetails(query: searchBar.text ?? "")
+        } else if sender.selectedSegmentIndex == 1 {
+        } else {
+        }
     }
 }
 extension SearchViewController: UITableViewDataSource {

@@ -33,6 +33,10 @@ class SubMenuViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction private func shareUnsplash(_ sender: UIButton) {
+        let controller = UIActivityViewController(activityItems: ["https://unsplash.com"], applicationActivities: nil)
+        self.present(controller, animated: true, completion: nil)
+    }
     @IBAction private func clickDone(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }

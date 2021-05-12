@@ -17,7 +17,7 @@
             <objects>
                 <viewController storyboardIdentifier="UploadViewController" id="wB0-m4-BnC" customClass="UploadViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fXQ-1Z-IMZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contribute to Unsplash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-YE-Nyb">
@@ -151,7 +151,7 @@
             <objects>
                 <viewController id="ebc-nh-Pz0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4j3-bl-Q1T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="OOh-si-zfu"/>
                         <color key="backgroundColor" name="RealBlack"/>
@@ -167,7 +167,7 @@
             <objects>
                 <viewController storyboardIdentifier="SubMenuViewController" id="QMp-kt-svg" customClass="SubMenuViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ex-S3-fsX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-Or-9e6">
@@ -192,6 +192,9 @@
                                         <state key="normal" title="Recommend Unsplash">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareUnsplash:" destination="QMp-kt-svg" eventType="touchUpInside" id="a6w-zU-cW9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JN-SE-DXe">
                                         <rect key="frame" x="0.0" y="48" width="97" height="30"/>
@@ -332,7 +335,7 @@
             <objects>
                 <viewController id="Llh-qI-dsb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Piq-BZ-SkA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9to-Ym-BLm">
@@ -373,7 +376,7 @@
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="6rG-Uc-wdc" customClass="SearchViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J6G-ep-xUd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oi5-an-A30">
@@ -405,6 +408,9 @@
                                     <segment title="Users"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="6rG-Uc-wdc" eventType="valueChanged" id="Mzs-8L-2oN"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uky-UM-R4J">
                                 <rect key="frame" x="15" y="142" width="384" height="671"/>
@@ -461,6 +467,7 @@
                     <navigationItem key="navigationItem" id="ojc-j0-4oR"/>
                     <connections>
                         <outlet property="searchBar" destination="t1n-6K-DnQ" id="6hL-8I-OMf"/>
+                        <outlet property="segmentControl" destination="c2F-fd-8DV" id="zWV-jw-dee"/>
                         <outlet property="tableView" destination="Uky-UM-R4J" id="LS0-sF-TEV"/>
                     </connections>
                 </viewController>
@@ -473,7 +480,7 @@
             <objects>
                 <viewController id="gLV-Jb-UZR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPV-6K-pUe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-bJ-Pkb">
