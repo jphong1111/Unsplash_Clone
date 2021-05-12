@@ -17,7 +17,7 @@
             <objects>
                 <viewController storyboardIdentifier="UploadViewController" id="wB0-m4-BnC" customClass="UploadViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fXQ-1Z-IMZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contribute to Unsplash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-YE-Nyb">
@@ -151,7 +151,7 @@
             <objects>
                 <viewController id="ebc-nh-Pz0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4j3-bl-Q1T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="OOh-si-zfu"/>
                         <color key="backgroundColor" name="RealBlack"/>
@@ -167,7 +167,7 @@
             <objects>
                 <viewController storyboardIdentifier="SubMenuViewController" id="QMp-kt-svg" customClass="SubMenuViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ex-S3-fsX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-Or-9e6">
@@ -335,7 +335,7 @@
             <objects>
                 <viewController id="Llh-qI-dsb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Piq-BZ-SkA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9to-Ym-BLm">
@@ -376,7 +376,7 @@
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="6rG-Uc-wdc" customClass="SearchViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J6G-ep-xUd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oi5-an-A30">
@@ -387,6 +387,11 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="barTintColor" name="RealBlack"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </searchBar>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB8-U9-Vw8">
                                         <rect key="frame" x="360" y="0.0" width="24" height="56"/>
@@ -409,7 +414,7 @@
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="didChangeSegment:" destination="6rG-Uc-wdc" eventType="valueChanged" id="Mzs-8L-2oN"/>
+                                    <action selector="onChangeSegment:" destination="6rG-Uc-wdc" eventType="valueChanged" id="UCh-wR-tJE"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uky-UM-R4J">
@@ -432,15 +437,25 @@
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="303" id="rvU-dY-MfQ"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQP-8W-VBa">
+                                                    <rect key="frame" x="10" y="274" width="41" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="WYU-Cx-RJ4" secondAttribute="bottom" id="4C4-aW-76Q"/>
+                                                <constraint firstItem="AQP-8W-VBa" firstAttribute="leading" secondItem="1zG-AK-rC3" secondAttribute="leading" constant="10" id="Efm-Ex-S8h"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AQP-8W-VBa" secondAttribute="trailing" constant="10" id="PXJ-BJ-4C4"/>
                                                 <constraint firstItem="WYU-Cx-RJ4" firstAttribute="top" secondItem="1zG-AK-rC3" secondAttribute="top" id="Tay-jg-UJ1"/>
+                                                <constraint firstItem="AQP-8W-VBa" firstAttribute="bottom" secondItem="1zG-AK-rC3" secondAttribute="bottomMargin" id="cQ1-UP-4fT"/>
                                                 <constraint firstItem="WYU-Cx-RJ4" firstAttribute="leading" secondItem="1zG-AK-rC3" secondAttribute="leading" id="hSi-al-emK"/>
                                                 <constraint firstAttribute="trailing" secondItem="WYU-Cx-RJ4" secondAttribute="trailing" id="xlt-do-sdh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nameLabel" destination="AQP-8W-VBa" id="1Md-rd-XGS"/>
                                             <outlet property="searchImage" destination="WYU-Cx-RJ4" id="pxH-TS-fa4"/>
                                         </connections>
                                     </tableViewCell>
@@ -480,7 +495,7 @@
             <objects>
                 <viewController id="gLV-Jb-UZR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPV-6K-pUe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-bJ-Pkb">

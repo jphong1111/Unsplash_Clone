@@ -24,6 +24,11 @@
 		9598604E264B1A8E00C0C73C /* SearchPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598604D264B1A8E00C0C73C /* SearchPhoto.swift */; };
 		95986054264B1C5800C0C73C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986053264B1C5800C0C73C /* SearchTableViewCell.swift */; };
 		95986058264B92C900C0C73C /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986057264B92C900C0C73C /* NetworkRouter.swift */; };
+		9598605C264C32BF00C0C73C /* SearchCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598605B264C32BF00C0C73C /* SearchCollection.swift */; };
+		9598605F264C350D00C0C73C /* SearchCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598605E264C350D00C0C73C /* SearchCollectionTableViewCell.swift */; };
+		95986062264C3CBB00C0C73C /* SearchCollectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986061264C3CBB00C0C73C /* SearchCollectionTableViewCellViewModel.swift */; };
+		95986065264C40EC00C0C73C /* SearchCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95986064264C40EC00C0C73C /* SearchCollectionTableViewCell.xib */; };
+		95986069264C6FCF00C0C73C /* SearchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986068264C6FCF00C0C73C /* SearchUser.swift */; };
 		95AE9E9426459B19002D956F /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE9E9326459B19002D956F /* MainMenuViewController.swift */; };
 		95AE9E9726459BD3002D956F /* MainMenuTableViewFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AE9E9626459BD3002D956F /* MainMenuTableViewFirstCell.xib */; };
 		95AE9E9B26459CCA002D956F /* MainMenuTableViewSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AE9E9A26459CCA002D956F /* MainMenuTableViewSecondCell.xib */; };
@@ -81,6 +86,11 @@
 		9598604D264B1A8E00C0C73C /* SearchPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhoto.swift; sourceTree = "<group>"; };
 		95986053264B1C5800C0C73C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		95986057264B92C900C0C73C /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		9598605B264C32BF00C0C73C /* SearchCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollection.swift; sourceTree = "<group>"; };
+		9598605E264C350D00C0C73C /* SearchCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		95986061264C3CBB00C0C73C /* SearchCollectionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		95986064264C40EC00C0C73C /* SearchCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionTableViewCell.xib; sourceTree = "<group>"; };
+		95986068264C6FCF00C0C73C /* SearchUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUser.swift; sourceTree = "<group>"; };
 		95AE9E9326459B19002D956F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		95AE9E9626459BD3002D956F /* MainMenuTableViewFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewFirstCell.xib; sourceTree = "<group>"; };
 		95AE9E9A26459CCA002D956F /* MainMenuTableViewSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewSecondCell.xib; sourceTree = "<group>"; };
@@ -188,6 +198,7 @@
 			children = (
 				95986042264AFDA000C0C73C /* SearchTableViewCellViewModel.swift */,
 				95986038264AFC1E00C0C73C /* SearchViewModel.swift */,
+				95986061264C3CBB00C0C73C /* SearchCollectionTableViewCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				9598604D264B1A8E00C0C73C /* SearchPhoto.swift */,
+				9598605B264C32BF00C0C73C /* SearchCollection.swift */,
+				95986068264C6FCF00C0C73C /* SearchUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				95986053264B1C5800C0C73C /* SearchTableViewCell.swift */,
+				9598605E264C350D00C0C73C /* SearchCollectionTableViewCell.swift */,
+				95986064264C40EC00C0C73C /* SearchCollectionTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -551,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95986065264C40EC00C0C73C /* SearchCollectionTableViewCell.xib in Resources */,
 				95F00435264298C4004E85CF /* LaunchScreen.storyboard in Resources */,
 				95F00432264298C4004E85CF /* Assets.xcassets in Resources */,
 				95AE9EE62647BEE9002D956F /* Login.storyboard in Resources */,
@@ -649,8 +665,10 @@
 				95AE9F152649C861002D956F /* LatestCollectionViewCell.swift in Sources */,
 				95986039264AFC1E00C0C73C /* SearchViewModel.swift in Sources */,
 				95986025264A4B9100C0C73C /* AppError.swift in Sources */,
+				95986062264C3CBB00C0C73C /* SearchCollectionTableViewCellViewModel.swift in Sources */,
 				95986043264AFDA000C0C73C /* SearchTableViewCellViewModel.swift in Sources */,
 				9598601F264A4B4F00C0C73C /* Router.swift in Sources */,
+				9598605C264C32BF00C0C73C /* SearchCollection.swift in Sources */,
 				95AE9EDD2647BE47002D956F /* UploadViewController.swift in Sources */,
 				95F00429264298BF004E85CF /* AppDelegate.swift in Sources */,
 				95F0042B264298BF004E85CF /* SceneDelegate.swift in Sources */,
@@ -662,6 +680,7 @@
 				95AE9F102649C4A4002D956F /* SearchViewController.swift in Sources */,
 				95986054264B1C5800C0C73C /* SearchTableViewCell.swift in Sources */,
 				95AE9EB02645A3C3002D956F /* MainMenuTableViewSecondCell.swift in Sources */,
+				95986069264C6FCF00C0C73C /* SearchUser.swift in Sources */,
 				95AE9EAD2645A322002D956F /* MainMenuTableViewFirstCell.swift in Sources */,
 				9598604E264B1A8E00C0C73C /* SearchPhoto.swift in Sources */,
 				95986022264A4B6800C0C73C /* EndPointType.swift in Sources */,
@@ -671,6 +690,7 @@
 				95986028264A548300C0C73C /* PhotoAPI.swift in Sources */,
 				95AE9EB72645C8D6002D956F /* LoginViewController.swift in Sources */,
 				95AE9F0C2649958C002D956F /* ConversationManager.swift in Sources */,
+				9598605F264C350D00C0C73C /* SearchCollectionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,10 +20,10 @@ struct LatestPhoto: Decodable {
 }
 
 struct User: Decodable {
-    let name: String
+    let name: String?
 }
 struct Urls: Decodable {
-    let small: String
+    let small: String?
 }
 
 struct Link: Decodable {

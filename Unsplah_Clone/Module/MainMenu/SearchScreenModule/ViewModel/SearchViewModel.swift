@@ -14,7 +14,17 @@ protocol SearchViewModelDelegate: AnyObject {
 class SearchViewModel {
     private let router = Router<PhotoAPI>()
     
-    private var dataSource = [PhotoResult]() {
+    private var photoDataSource = [PhotoResult]() {
+        didSet {
+            self.delegate?.reload()
+        }
+    }
+    private var collectionDataSource = [CollectionResult]() {
+        didSet {
+            self.delegate?.reload()
+        }
+    }
+    private var userDataSource = [UserResult]() {
         didSet {
             self.delegate?.reload()
         }
@@ -25,28 +35,57 @@ class SearchViewModel {
         self.delegate = delegate
     }
     
-    func fetchPhotoDetails(query: String) {
+    func fetchSearchPhoto(query: String) {
         self.router.request(PhotoAPI.searchPhoto(query: query, page: "1")) { [weak self] (result: Result<SearchPhoto, AppError>) in
             switch result {
             case .success(let photos):
-                self?.dataSource = photos.results
+                self?.photoDataSource = photos.results
                 
             case .failure(let error):
                 self?.delegate?.show(error: error)
             }
         }
     }
-    func numberOfRows() -> Int {
-        self.dataSource.count
+    func fetchSearchCollection(query: String) {
+        self.router.request(PhotoAPI.searchCollection(query: query, page: "1")) { [weak self] (result: Result<SearchCollection, AppError>) in
+            switch result {
+            case .success(let photos):
+                self?.collectionDataSource = photos.results
+                
+            case .failure(let error):
+                self?.delegate?.show(error: error)
+            }
+        }
+    }
+    func numberOfPhotos() -> Int {
+        self.photoDataSource.count
+    }
+    func numberOfCollections() -> Int {
+        self.collectionDataSource.count
+    }
+    func numberOfUsers() -> Int {
+        self.userDataSource.count
     }
     func searchedPhoto(at index: Int) -> SearchTableViewCellViewModelProtocol {
-        SearchTableViewCellViewModel(searchPhoto: self.dataSource[index])
+        SearchTableViewCellViewModel(searchPhoto: self.photoDataSource[index])
     }
-    func configureCell(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+    func searchedPhotoCollection(at index: Int) -> SearchCollectionTableViewCellViewModelProtocol {
+        SearchCollectionTableViewCellViewModel(searchPhotoCollection: self.collectionDataSource[index])
+    }
+    func configurePhotoCell(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell: SearchTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as? SearchTableViewCell
         else { fatalError("not find") }
         let searchedPhoto = self.searchedPhoto(at: indexPath.row)
         cell.configure(configurator: searchedPhoto)
+        return cell
+    }
+    func configureCollectionCell(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell: SearchCollectionTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SearchCollectionTableViewCell") as? SearchCollectionTableViewCell
+        else { fatalError("not find") }
+        let searchedCollectionPhoto = self.searchedPhotoCollection(at: indexPath.row)
+        cell.configure(configurator: searchedCollectionPhoto)
         return cell
     }
 }

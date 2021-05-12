@@ -13,6 +13,7 @@ struct SearchPhoto: Decodable {
 
 struct PhotoResult: Decodable {
     let urls: ResultUrl?
+    let user: User
 }
 
 struct ResultUrl: Decodable {

@@ -18,14 +18,17 @@ class SearchViewController: UIViewController {
         didSet {
             self.tableView.dataSource = self
             self.tableView.delegate = self
+            self.tableView.register(UINib(nibName: "SearchCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchCollectionTableViewCell")
+            self.tableView.reloadData()
         }
     }
     @IBOutlet private weak var segmentControl: UISegmentedControl!
-    
+
     lazy var viewModel = SearchViewModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,29 +41,47 @@ class SearchViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
-    @IBAction private func didChangeSegment(_ sender: UISegmentedControl) {
-        
-        if sender.selectedSegmentIndex == 0 {
-            viewModel.fetchPhotoDetails(query: searchBar.text ?? "")
-        } else if sender.selectedSegmentIndex == 1 {
-        } else {
-        }
+    @IBAction private func onChangeSegment(_ sender: UISegmentedControl) {
+        self.tableView.reloadData()
     }
 }
 extension SearchViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfRows()
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            return viewModel.numberOfPhotos()
+
+        case 1:
+            return viewModel.numberOfCollections()
+            
+        case 2:
+            return viewModel.numberOfUsers()
+            
+        default:
+            fatalError("segment control error")
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        viewModel.configureCell(in: tableView, for: indexPath)
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            return viewModel.configurePhotoCell(in: tableView, for: indexPath)
+
+        case 1:
+            return viewModel.configureCollectionCell(in: tableView, for: indexPath)
+            
+        default:
+            fatalError("segment control error")
+        }
     }
 }
 extension SearchViewController: UITableViewDelegate {
 }
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.fetchPhotoDetails(query: searchBar.text ?? "")
+        viewModel.fetchSearchPhoto(query: searchBar.text ?? "")
+        viewModel.fetchSearchCollection(query: searchBar.text ?? "")
     }
 }
 extension SearchViewController: SearchViewModelDelegate {

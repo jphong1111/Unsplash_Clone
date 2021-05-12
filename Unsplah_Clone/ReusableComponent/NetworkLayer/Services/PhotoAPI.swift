@@ -11,6 +11,7 @@ enum PhotoAPI {
     case collections
     case photo
     case searchPhoto(query: String, page: String)
+    case searchCollection(query: String, page: String)
 }
 
 extension PhotoAPI: EndPointType {
@@ -20,8 +21,10 @@ extension PhotoAPI: EndPointType {
             return "collections/"
         case .photo:
             return "photos/"
-        case .searchPhoto(let query, let page):
+        case .searchPhoto:
             return "search/photos"
+        case .searchCollection:
+            return "search/collections"
         }
     }
     
@@ -35,6 +38,9 @@ extension PhotoAPI: EndPointType {
             return .requestParameters((bodyParameters: nil, urlParameters: ["client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .searchPhoto(let query, let page):
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            
+        case .searchCollection(let query, let page):
             return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
         }
     }

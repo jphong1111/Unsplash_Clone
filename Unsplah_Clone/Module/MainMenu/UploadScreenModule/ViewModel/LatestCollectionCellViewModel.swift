@@ -22,7 +22,7 @@ class LatestCollectionCellViewModel: LatestCollectionCellViewModelProtocol {
     }
     
     var imageView: String {
-        latestPhoto.urls.small
+        latestPhoto.urls.small ?? ""
     }
     
     var title: String {
@@ -30,7 +30,7 @@ class LatestCollectionCellViewModel: LatestCollectionCellViewModelProtocol {
     }
     
     var author: String {
-        latestPhoto.user.name
+        latestPhoto.user.name ?? ""
     }
     var htmlLink: String {
         latestPhoto.links.html
