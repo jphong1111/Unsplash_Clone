@@ -57,6 +57,17 @@ class SearchViewModel {
             }
         }
     }
+    func fetchSearchUser(query: String) {
+        self.router.request(PhotoAPI.searchUser(query: query, page: "1")) { [weak self] (result: Result<SearchUser, AppError>) in
+            switch result {
+            case .success(let photos):
+                self?.userDataSource = photos.results
+                
+            case .failure(let error):
+                self?.delegate?.show(error: error)
+            }
+        }
+    }
     func numberOfPhotos() -> Int {
         self.photoDataSource.count
     }
@@ -72,6 +83,9 @@ class SearchViewModel {
     func searchedPhotoCollection(at index: Int) -> SearchCollectionTableViewCellViewModelProtocol {
         SearchCollectionTableViewCellViewModel(searchPhotoCollection: self.collectionDataSource[index])
     }
+    func searchedUser(at index: Int) -> SearchUserTableViewCellViewModelProtocol {
+        SearchUserTableViewCellViewModel(searchUser: self.userDataSource[index])
+    }
     func configurePhotoCell(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell: SearchTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as? SearchTableViewCell
@@ -86,6 +100,14 @@ class SearchViewModel {
         else { fatalError("not find") }
         let searchedCollectionPhoto = self.searchedPhotoCollection(at: indexPath.row)
         cell.configure(configurator: searchedCollectionPhoto)
+        return cell
+    }
+    func configureUserCell(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell: SearchUserTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SearchUserTableViewCell") as? SearchUserTableViewCell
+        else { fatalError("not find") }
+        let searchedUserInfo = self.searchedUser(at: indexPath.row)
+        cell.configure(configurator: searchedUserInfo)
         return cell
     }
 }

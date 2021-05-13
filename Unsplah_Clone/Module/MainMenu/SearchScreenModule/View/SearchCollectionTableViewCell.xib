@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PO0-vR-9gr">
-                        <rect key="frame" x="0.0" y="0.0" width="306" height="354"/>
+                        <rect key="frame" x="0.0" y="0.0" width="306" height="344"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="306" id="Io2-6L-Qof"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="354" id="Ywz-OP-En7"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="306" id="39R-zl-JCN"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="344" id="KeU-x2-Zc5"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVn-tn-5do">
@@ -30,8 +31,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" name="RealBlack"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="PO0-vR-9gr" secondAttribute="bottom" id="BFC-Nl-qNl"/>
+                    <constraint firstAttribute="bottom" secondItem="PO0-vR-9gr" secondAttribute="bottom" constant="10" id="BFC-Nl-qNl"/>
                     <constraint firstItem="iVn-tn-5do" firstAttribute="centerX" secondItem="9DS-08-6JN" secondAttribute="centerX" id="CSR-Ob-4su"/>
                     <constraint firstItem="PO0-vR-9gr" firstAttribute="top" secondItem="9DS-08-6JN" secondAttribute="top" id="HRy-Rf-Xs7"/>
                     <constraint firstAttribute="trailing" secondItem="PO0-vR-9gr" secondAttribute="trailing" id="UCA-75-oZd"/>
@@ -46,4 +48,9 @@
             <point key="canvasLocation" x="149.27536231884059" y="129.24107142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="RealBlack">
+            <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

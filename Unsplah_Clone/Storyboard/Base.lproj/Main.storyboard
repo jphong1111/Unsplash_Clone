@@ -360,7 +360,8 @@
                         <color key="backgroundColor" name="RealBlack"/>
                     </view>
                     <navigationItem key="navigationItem" title="Unsplash" id="Oa1-12-TqU">
-                        <barButtonItem key="leftBarButtonItem" image="info.circle" catalog="system" id="OQ7-OH-MWV">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="logo.white copy" style="plain" id="OQ7-OH-MWV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="QMp-kt-svg" kind="showDetail" id="kpS-Hh-ONB"/>
                             </connections>
@@ -444,6 +445,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="RealBlack"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="WYU-Cx-RJ4" secondAttribute="bottom" id="4C4-aW-76Q"/>
                                                 <constraint firstItem="AQP-8W-VBa" firstAttribute="leading" secondItem="1zG-AK-rC3" secondAttribute="leading" constant="10" id="Efm-Ex-S8h"/>
@@ -483,6 +485,7 @@
                     <connections>
                         <outlet property="searchBar" destination="t1n-6K-DnQ" id="6hL-8I-OMf"/>
                         <outlet property="segmentControl" destination="c2F-fd-8DV" id="zWV-jw-dee"/>
+                        <outlet property="settingButton" destination="HB8-U9-Vw8" id="2eq-Wn-YcX"/>
                         <outlet property="tableView" destination="Uky-UM-R4J" id="LS0-sF-TEV"/>
                     </connections>
                 </viewController>
@@ -662,6 +665,11 @@
                         <color key="backgroundColor" name="RealBlack"/>
                         <color key="tintColor" name="RealBlack"/>
                         <color key="barTintColor" name="RealBlack"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="9IC-4e-8Kt" kind="relationship" relationship="viewControllers" id="MjC-hl-pv4"/>
@@ -739,8 +747,8 @@
     <resources>
         <image name="first.Screen" width="27" height="26"/>
         <image name="fourth.Screen" width="27" height="26"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="logo.white" width="181" height="180"/>
+        <image name="logo.white copy" width="31" height="31"/>
         <image name="second.Screen" width="27" height="26"/>
         <image name="setting" width="24" height="24"/>
         <image name="startImage" width="834" height="746"/>

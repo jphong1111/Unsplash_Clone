@@ -9,7 +9,11 @@ import SDWebImage
 import UIKit
 
 class SearchCollectionTableViewCell: UITableViewCell {
-    @IBOutlet private weak var collectionImageView: UIImageView!
+    @IBOutlet private weak var collectionImageView: UIImageView! {
+        didSet {
+            ReusableComponent.addRadiusForImage(self.collectionImageView)
+        }
+    }
     @IBOutlet private weak var title: UILabel!
     
     func configure(configurator: SearchCollectionTableViewCellViewModelProtocol) {

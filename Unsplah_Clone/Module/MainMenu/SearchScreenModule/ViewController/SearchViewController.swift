@@ -19,16 +19,17 @@ class SearchViewController: UIViewController {
             self.tableView.dataSource = self
             self.tableView.delegate = self
             self.tableView.register(UINib(nibName: "SearchCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchCollectionTableViewCell")
+            self.tableView.register(UINib(nibName: "SearchUserTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchUserTableViewCell")
             self.tableView.reloadData()
         }
     }
+    @IBOutlet private weak var settingButton: UIButton!
     @IBOutlet private weak var segmentControl: UISegmentedControl!
 
     lazy var viewModel = SearchViewModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +43,11 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction private func onChangeSegment(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            settingButton.isHidden = false
+        } else {
+            settingButton.isHidden = true
+        }
         self.tableView.reloadData()
     }
 }
@@ -70,6 +76,9 @@ extension SearchViewController: UITableViewDataSource {
 
         case 1:
             return viewModel.configureCollectionCell(in: tableView, for: indexPath)
+
+        case 2:
+            return viewModel.configureUserCell(in: tableView, for: indexPath)
             
         default:
             fatalError("segment control error")
@@ -82,6 +91,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         viewModel.fetchSearchPhoto(query: searchBar.text ?? "")
         viewModel.fetchSearchCollection(query: searchBar.text ?? "")
+        viewModel.fetchSearchUser(query: searchBar.text ?? "")
     }
 }
 extension SearchViewController: SearchViewModelDelegate {

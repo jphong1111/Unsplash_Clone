@@ -16,6 +16,17 @@ enum ReusableComponent {
         view.layer.cornerRadius = 5
         view.layer.masksToBounds = true
     }
+    static func addRadiusForImage(_ view: UIView) {
+        view.layer.cornerRadius = 10
+        view.layer.masksToBounds = true
+    }
+    static func addCircleShapeForImage(_ view: UIView) {
+        view.layer.borderWidth = 1.0
+        view.layer.masksToBounds = false
+        view.layer.borderColor = UIColor.clear.cgColor
+        view.layer.cornerRadius = view.frame.size.width / 2
+        view.clipsToBounds = true
+    }
     static func alertMessage(title: String, message: String) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
