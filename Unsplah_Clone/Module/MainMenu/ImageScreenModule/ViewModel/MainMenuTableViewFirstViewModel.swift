@@ -8,21 +8,22 @@
 import UIKit
 
 protocol MainMenuTableViewFirstViewModelProtocol {
-    var photoImage: UIImage { get }
-    var photoSponsor: String { get }
+    var photoImage: String { get }
     var author: String { get }
 }
 class MainMenuTableViewFirstViewModel: MainMenuTableViewFirstViewModelProtocol {
     
-    var photoImage: UIImage {
-        UIImage()
+    let photos: Photos
+    
+    init(photos: Photos) {
+        self.photos = photos
     }
     
-    var photoSponsor: String {
-        ""
+    var photoImage: String {
+        photos.urls.small ?? ""
     }
     
     var author: String {
-        ""
+        photos.user.name ?? " "
     }
 }
