@@ -22,13 +22,24 @@ class MainMenuViewModel {
     }
     weak var delegate: MainMenuViewModelDelegate?
     
-    var collectionDataSource: [String] = ["Editorial", "Wallpapers", "Nature", "People", "Architecture", "Current Events", "Business & work"]
+    var collectionDataSource: [String] = ["Editorial", "Wallpapers", "Nature", "People", "Architecture", "Current Events", "Experimental", "Fashion", "Film", "Interiors"]
     
     init(delegate: MainMenuViewModelDelegate) {
         self.delegate = delegate
     }
     func fetchPhoto() {
         self.router.request(PhotoAPI.photoWithPage(page: "\(Int.random(in: 1..<1000))")) { [weak self] (result: Result<[Photos], AppError>) in
+            switch result {
+            case .success(let photos):
+                self?.dataSource = photos.compactMap { MainMenuTableViewFirstViewModel(photos: $0) }
+                
+            case .failure(let error):
+                self?.delegate?.show(error: error)
+            }
+        }
+    }
+    func fetchPhotoByCollection(topics: String) {
+        self.router.request(PhotoAPI.topicsSearch(topic: topics, page: "\(Int.random(in: 1..<10))")) { [weak self] (result: Result<[Photos], AppError>) in
             switch result {
             case .success(let photos):
                 self?.dataSource = photos.compactMap { MainMenuTableViewFirstViewModel(photos: $0) }
@@ -50,6 +61,9 @@ class MainMenuViewModel {
             else { fatalError("cannot find cell") }
         cell.configure(title: collectionSelect(at: indexPath.row))
         return cell
+    }
+    func topicFind(for indexPath: IndexPath) -> String {
+        collectionDataSource[indexPath.row].lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
     }
     // MARK: - photo configure functions
     func numberOfPhotos() -> Int {

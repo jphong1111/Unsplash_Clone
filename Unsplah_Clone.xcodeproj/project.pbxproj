@@ -14,7 +14,7 @@
 		9538F0FC264F162D00DC1CD7 /* DetailInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0FB264F162D00DC1CD7 /* DetailInfoViewModel.swift */; };
 		9538F0FF264F165E00DC1CD7 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0FE264F165E00DC1CD7 /* PhotoInfo.swift */; };
 		9538F102264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F101264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift */; };
-		9538F1052650C18D00DC1CD7 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F1042650C18D00DC1CD7 /* CollectionViewModel.swift */; };
+		9538F10C2651126600DC1CD7 /* StretchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F10B2651126600DC1CD7 /* StretchyTableHeaderView.swift */; };
 		95986006264A4A9800C0C73C /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986005264A4A9800C0C73C /* JSONParameterEncoder.swift */; };
 		9598600B264A4ABB00C0C73C /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598600A264A4ABB00C0C73C /* ParameterEncoder.swift */; };
 		9598600E264A4AD000C0C73C /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598600D264A4AD000C0C73C /* URLParameterEncoder.swift */; };
@@ -88,7 +88,7 @@
 		9538F0FB264F162D00DC1CD7 /* DetailInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewModel.swift; sourceTree = "<group>"; };
 		9538F0FE264F165E00DC1CD7 /* PhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		9538F101264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoDescribeViewModel.swift; sourceTree = "<group>"; };
-		9538F1042650C18D00DC1CD7 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		9538F10B2651126600DC1CD7 /* StretchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyTableHeaderView.swift; sourceTree = "<group>"; };
 		95986005264A4A9800C0C73C /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		9598600A264A4ABB00C0C73C /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		9598600D264A4AD000C0C73C /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
@@ -312,6 +312,7 @@
 				95AE9EAF2645A3C3002D956F /* MainMenuTableViewSecondCell.swift */,
 				95AE9EAC2645A322002D956F /* MainMenuTableViewFirstCell.swift */,
 				95986080264D91FB00C0C73C /* MainCollectionViewCell.swift */,
+				9538F10B2651126600DC1CD7 /* StretchyTableHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,7 +326,6 @@
 				9538F0F0264EC4AB00DC1CD7 /* DetailMenuViewModel.swift */,
 				9538F0FB264F162D00DC1CD7 /* DetailInfoViewModel.swift */,
 				9538F101264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift */,
-				9538F1042650C18D00DC1CD7 /* CollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -698,7 +698,6 @@
 				95986039264AFC1E00C0C73C /* SearchViewModel.swift in Sources */,
 				9538F0FC264F162D00DC1CD7 /* DetailInfoViewModel.swift in Sources */,
 				95986081264D91FB00C0C73C /* MainCollectionViewCell.swift in Sources */,
-				9538F1052650C18D00DC1CD7 /* CollectionViewModel.swift in Sources */,
 				95986025264A4B9100C0C73C /* AppError.swift in Sources */,
 				95986062264C3CBB00C0C73C /* SearchCollectionTableViewCellViewModel.swift in Sources */,
 				95986043264AFDA000C0C73C /* SearchTableViewCellViewModel.swift in Sources */,
@@ -724,6 +723,7 @@
 				95986022264A4B6800C0C73C /* EndPointType.swift in Sources */,
 				9598601C264A4B3000C0C73C /* NetworkResponse.swift in Sources */,
 				95986016264A4B0500C0C73C /* HTTPTask.swift in Sources */,
+				9538F10C2651126600DC1CD7 /* StretchyTableHeaderView.swift in Sources */,
 				9598606D264C9E6600C0C73C /* SearchUserTableViewCell.swift in Sources */,
 				9538F0F9264EE4A900DC1CD7 /* DetailInfoViewController.swift in Sources */,
 				95AE9E9E26459D2B002D956F /* MainMenuTableViewFirstViewModel.swift in Sources */,

@@ -339,16 +339,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9to-Ym-BLm">
-                                <rect key="frame" x="0.0" y="-95" width="414" height="908"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="RealBlack"/>
-                                <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startImage" id="qj7-cY-uNf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="1pu-zS-Abc">
-                                        <rect key="frame" x="0.0" y="207" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1pu-zS-Abc" id="99y-vn-snQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
@@ -416,7 +412,7 @@
                             <constraint firstItem="TZk-kX-wXA" firstAttribute="leading" secondItem="JzC-vB-JIn" secondAttribute="leading" id="F5m-Rz-vgL"/>
                             <constraint firstItem="9to-Ym-BLm" firstAttribute="leading" secondItem="JzC-vB-JIn" secondAttribute="leading" id="cAg-rP-uwY"/>
                             <constraint firstItem="TZk-kX-wXA" firstAttribute="trailing" secondItem="JzC-vB-JIn" secondAttribute="trailing" id="pwf-4k-OtN"/>
-                            <constraint firstItem="9to-Ym-BLm" firstAttribute="top" secondItem="Piq-BZ-SkA" secondAttribute="top" constant="-95" id="zPH-lB-XS7"/>
+                            <constraint firstItem="9to-Ym-BLm" firstAttribute="top" secondItem="Piq-BZ-SkA" secondAttribute="top" id="zPH-lB-XS7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Unsplash" id="3sv-Qq-kLc">

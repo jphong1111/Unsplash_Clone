@@ -14,13 +14,13 @@ class MainMenuViewController: UIViewController {
             self.tableView.dataSource = self
             self.tableView.delegate = self
             self.tableView.register(UINib(nibName: "MainMenuTableViewFirstCell", bundle: nil), forCellReuseIdentifier: "MainMenuTableViewFirstCell")
-            //            self.tableview.register(UINib(nibName: MainMenuTableViewSecondCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: MainMenuTableViewSecondCell.cellIdentifier)
             self.tableView.reloadData()
         }
     }
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
             self.collectionView.dataSource = self
+            self.collectionView.delegate = self
             self.collectionView.backgroundColor = .clear
         }
     }
@@ -33,13 +33,18 @@ class MainMenuViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        
+        getHeader()
         viewModel.fetchPhoto()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? DetailMenuViewController {
             destinationViewController.dataSource = viewModel.searchedPhoto(at: selectedCell)
         }
+    }
+    func getHeader() {
+        let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))
+        headerView.imageView?.image = UIImage(named: "startImage")
+        self.tableView.tableHeaderView = headerView
     }
 }
 extension MainMenuViewController: UITableViewDataSource {
@@ -59,6 +64,12 @@ extension MainMenuViewController: UITableViewDelegate {
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
 }
+extension MainMenuViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let headerView = self.tableView.tableHeaderView as? StretchyTableHeaderView else { fatalError("no header find") }
+        headerView.scrollViewDidScroll(scrollView: scrollView)
+    }
+}
 extension MainMenuViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.numbersOfCollection()
@@ -68,9 +79,17 @@ extension MainMenuViewController: UICollectionViewDataSource {
         viewModel.configureCollectionCell(in: collectionView, for: indexPath)
     }
 }
+extension MainMenuViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let topic = viewModel.topicFind(for: indexPath)
+        viewModel.fetchPhotoByCollection(topics: topic)
+    }
+}
 extension MainMenuViewController: MainMenuViewModelDelegate {
     func reload() {
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func show(error: AppError) {
