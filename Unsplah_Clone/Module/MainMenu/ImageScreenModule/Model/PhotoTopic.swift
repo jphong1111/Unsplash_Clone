@@ -8,4 +8,6 @@
 import Foundation
 
 struct PhotoTopic: Decodable {
+    let urls: Urls
+    let user: User
 }

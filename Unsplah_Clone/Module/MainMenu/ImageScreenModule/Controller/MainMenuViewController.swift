@@ -33,7 +33,7 @@ class MainMenuViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-
+        
         viewModel.fetchPhoto()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

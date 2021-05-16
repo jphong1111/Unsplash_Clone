@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9538F0EC264E327100DC1CD7 /* DetailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0EB264E327100DC1CD7 /* DetailMenuViewController.swift */; };
+		9538F0F1264EC4AB00DC1CD7 /* DetailMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0F0264EC4AB00DC1CD7 /* DetailMenuViewModel.swift */; };
+		9538F0F5264EE1E800DC1CD7 /* AuthorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0F4264EE1E800DC1CD7 /* AuthorDetailViewController.swift */; };
+		9538F0F9264EE4A900DC1CD7 /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0F8264EE4A900DC1CD7 /* DetailInfoViewController.swift */; };
+		9538F0FC264F162D00DC1CD7 /* DetailInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0FB264F162D00DC1CD7 /* DetailInfoViewModel.swift */; };
+		9538F0FF264F165E00DC1CD7 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0FE264F165E00DC1CD7 /* PhotoInfo.swift */; };
+		9538F102264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F101264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift */; };
+		9538F1052650C18D00DC1CD7 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F1042650C18D00DC1CD7 /* CollectionViewModel.swift */; };
 		95986006264A4A9800C0C73C /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986005264A4A9800C0C73C /* JSONParameterEncoder.swift */; };
 		9598600B264A4ABB00C0C73C /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598600A264A4ABB00C0C73C /* ParameterEncoder.swift */; };
 		9598600E264A4AD000C0C73C /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598600D264A4AD000C0C73C /* URLParameterEncoder.swift */; };
@@ -75,6 +82,13 @@
 		58965F7F3419890B727795C5 /* Pods-Unsplah_Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplah_Clone.debug.xcconfig"; path = "Target Support Files/Pods-Unsplah_Clone/Pods-Unsplah_Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		80087C2C5CB9E228B724BA60 /* Pods_Unsplah_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unsplah_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9538F0EB264E327100DC1CD7 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
+		9538F0F0264EC4AB00DC1CD7 /* DetailMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuViewModel.swift; sourceTree = "<group>"; };
+		9538F0F4264EE1E800DC1CD7 /* AuthorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthorDetailViewController.swift; path = Unsplah_Clone/Module/MainMenu/ImageScreenModule/Controller/AuthorDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		9538F0F8264EE4A900DC1CD7 /* DetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
+		9538F0FB264F162D00DC1CD7 /* DetailInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewModel.swift; sourceTree = "<group>"; };
+		9538F0FE264F165E00DC1CD7 /* PhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
+		9538F101264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoDescribeViewModel.swift; sourceTree = "<group>"; };
+		9538F1042650C18D00DC1CD7 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		95986005264A4A9800C0C73C /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		9598600A264A4ABB00C0C73C /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		9598600D264A4AD000C0C73C /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
@@ -285,6 +299,7 @@
 			children = (
 				95986034264AF0C500C0C73C /* PhotoTopic.swift */,
 				95986078264D827F00C0C73C /* Photos.swift */,
+				9538F0FE264F165E00DC1CD7 /* PhotoInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +322,10 @@
 				95AE9EA026459DB4002D956F /* MainMenuTableViewSecondViewModel.swift */,
 				95AE9E9D26459D2B002D956F /* MainMenuTableViewFirstViewModel.swift */,
 				95AE9EA326459FBA002D956F /* MainMenuViewModel.swift */,
+				9538F0F0264EC4AB00DC1CD7 /* DetailMenuViewModel.swift */,
+				9538F0FB264F162D00DC1CD7 /* DetailInfoViewModel.swift */,
+				9538F101264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift */,
+				9538F1042650C18D00DC1CD7 /* CollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -314,9 +333,11 @@
 		95AE9E9126459AE9002D956F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95AE9E9326459B19002D956F /* MainMenuViewController.swift */,
+				9538F0F4264EE1E800DC1CD7 /* AuthorDetailViewController.swift */,
 				95AE9F0826499242002D956F /* SubMenuViewController.swift */,
+				95AE9E9326459B19002D956F /* MainMenuViewController.swift */,
 				9538F0EB264E327100DC1CD7 /* DetailMenuViewController.swift */,
+				9538F0F8264EE4A900DC1CD7 /* DetailInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -651,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9538F102264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift in Sources */,
 				95AE9EA82645A13E002D956F /* ReusableComponent.swift in Sources */,
 				95986058264B92C900C0C73C /* NetworkRouter.swift in Sources */,
 				95AE9E9426459B19002D956F /* MainMenuViewController.swift in Sources */,
@@ -674,7 +696,9 @@
 				95AE9ED626479305002D956F /* AccountViewController.swift in Sources */,
 				95AE9F152649C861002D956F /* LatestCollectionViewCell.swift in Sources */,
 				95986039264AFC1E00C0C73C /* SearchViewModel.swift in Sources */,
+				9538F0FC264F162D00DC1CD7 /* DetailInfoViewModel.swift in Sources */,
 				95986081264D91FB00C0C73C /* MainCollectionViewCell.swift in Sources */,
+				9538F1052650C18D00DC1CD7 /* CollectionViewModel.swift in Sources */,
 				95986025264A4B9100C0C73C /* AppError.swift in Sources */,
 				95986062264C3CBB00C0C73C /* SearchCollectionTableViewCellViewModel.swift in Sources */,
 				95986043264AFDA000C0C73C /* SearchTableViewCellViewModel.swift in Sources */,
@@ -685,8 +709,11 @@
 				95F0042B264298BF004E85CF /* SceneDelegate.swift in Sources */,
 				95986012264A4AF100C0C73C /* HTTPMethod.swift in Sources */,
 				95AE9F1C2649CD08002D956F /* LatestPhoto.swift in Sources */,
+				9538F0F5264EE1E800DC1CD7 /* AuthorDetailViewController.swift in Sources */,
+				9538F0FF264F165E00DC1CD7 /* PhotoInfo.swift in Sources */,
 				95AE9EE22647BE5E002D956F /* UploadViewModel.swift in Sources */,
 				95AE9ECC2645E448002D956F /* StringColor.swift in Sources */,
+				9538F0F1264EC4AB00DC1CD7 /* DetailMenuViewModel.swift in Sources */,
 				95AE9EA426459FBA002D956F /* MainMenuViewModel.swift in Sources */,
 				95AE9F102649C4A4002D956F /* SearchViewController.swift in Sources */,
 				95986054264B1C5800C0C73C /* SearchTableViewCell.swift in Sources */,
@@ -698,6 +725,7 @@
 				9598601C264A4B3000C0C73C /* NetworkResponse.swift in Sources */,
 				95986016264A4B0500C0C73C /* HTTPTask.swift in Sources */,
 				9598606D264C9E6600C0C73C /* SearchUserTableViewCell.swift in Sources */,
+				9538F0F9264EE4A900DC1CD7 /* DetailInfoViewController.swift in Sources */,
 				95AE9E9E26459D2B002D956F /* MainMenuTableViewFirstViewModel.swift in Sources */,
 				95986028264A548300C0C73C /* PhotoAPI.swift in Sources */,
 				95AE9EB72645C8D6002D956F /* LoginViewController.swift in Sources */,

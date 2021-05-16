@@ -18,46 +18,45 @@ class DetailMenuViewController: UIViewController {
     }
     
     @IBOutlet private weak var heartButton: UIButton!
+    @IBOutlet private weak var authorButton: UIButton! {
+        didSet {
+            self.authorButton.setTitle(dataSource?.author, for: .normal)
+        }
+    }
+    let detailViewModel = DetailMenuViewModel()
     var dataSource: MainMenuTableViewFirstViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = dataSource?.author
+        navigationController?.title = dataSource?.author
     }
-    @IBAction private func dismissButtonClicked(_ sender: UIButton) {
+    @IBAction private func dismissButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction private func isHeartClicked(_ sender: UIButton) {
-        if UIImage(named: "heart") != nil {
-            sender.setImage(UIImage(named: "heart.png"), for: .normal)
-        }
-        if UIImage(named: "heartFill") != nil {
-            sender.setImage(UIImage(named: "heartFill.png"), for: .selected)
-        }
+        
+        heartButton.setImage(UIImage(named: "heart"), for: .selected)
+        heartButton.setImage(UIImage(named: "heartFill"), for: .selected)
+        heartButton.setImage(UIImage(named: "heartFill"), for: [.selected, .highlighted])
+        heartButton.isSelected = !heartButton.isSelected
     }
     @IBAction private func shareLink(_ sender: UIBarButtonItem) {
-        let controller = UIActivityViewController(activityItems: ["https://unsplash.com"], applicationActivities: nil)
-        self.present(controller, animated: true, completion: nil)
+        if let linkData = dataSource?.photoImage {
+            let controller = UIActivityViewController(activityItems: [linkData], applicationActivities: nil)
+            self.present(controller, animated: true, completion: nil)
+        }
     }
     @IBAction private func handlePan(sender: UIPanGestureRecognizer) {
-        let translation = sender.translation(in: nil)
-        let progress = translation.y / 2 / view.bounds.height
-        switch sender.state {
-        case .began:
-            hero_dismissViewController()
-            
-        case .changed:
-            Hero.shared.update(progress)
-            
-            let currentPosition = CGPoint(x: translation.x + detailImage.center.x, y: translation.y + detailImage.center.y)
-            Hero.shared.apply(modifiers: [.position(currentPosition)], to: detailImage)
-            
-        default:
-            if progress + sender.velocity(in: nil).y / view.bounds.height > 0.2 {
-                Hero.shared.finish()
-            } else {
-                Hero.shared.cancel()
-            }
-        }
+        detailViewModel.heroTouchImage(sender: sender, viewController: self, image: detailImage)
+    }
+    @IBAction private func toAuthorPage(_ sender: UIButton) {
+        // let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let authorDetailViewController = storyboard?.instantiateViewController(identifier: "AuthorDetailViewController") as? AuthorDetailViewController else { return }
+        self.navigationController?.pushViewController(authorDetailViewController, animated: true)
+    }
+    @IBAction private func toInfoPage(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let detailInfoViewController = storyBoard.instantiateViewController(identifier: "DetailInfoViewController") as? DetailInfoViewController else { return }
+        detailInfoViewController.id = dataSource?.id
     }
 }

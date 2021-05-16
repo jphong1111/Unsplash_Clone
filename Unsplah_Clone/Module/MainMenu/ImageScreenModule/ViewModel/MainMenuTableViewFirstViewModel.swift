@@ -10,6 +10,7 @@ import UIKit
 protocol MainMenuTableViewFirstViewModelProtocol {
     var photoImage: String { get }
     var author: String { get }
+    var id: String { get }
 }
 class MainMenuTableViewFirstViewModel: MainMenuTableViewFirstViewModelProtocol {
     
@@ -25,5 +26,9 @@ class MainMenuTableViewFirstViewModel: MainMenuTableViewFirstViewModelProtocol {
     
     var author: String {
         photos.user.name ?? " "
+    }
+    
+    var id: String {
+        photos.id
     }
 }

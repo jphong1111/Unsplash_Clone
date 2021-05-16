@@ -10,7 +10,10 @@ import Foundation
 enum PhotoAPI {
     case collections
     case photo
+    case photoWithPage(page: String)
+    case photoID(id: String)
     case topics(page: String)
+    case topicsSearch(topic: String, page: String)
     case searchPhoto(query: String, page: String)
     case searchCollection(query: String, page: String)
     case searchUser(query: String, page: String)
@@ -23,8 +26,14 @@ extension PhotoAPI: EndPointType {
             return "collections/"
         case .photo:
             return "photos/"
+        case .photoWithPage:
+            return "photos/"
+        case .photoID(let id):
+            return "photos/\(id)/"
         case .topics:
             return "topics/"
+        case .topicsSearch(let topic, _):
+            return "topics/\(topic)/photos/"
         case .searchPhoto:
             return "search/photos"
         case .searchCollection:
@@ -43,7 +52,16 @@ extension PhotoAPI: EndPointType {
         case .photo:
             return .requestParameters((bodyParameters: nil, urlParameters: ["client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
+        case .photoWithPage(let page):
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            
+        case .photoID:
+            return .requestParameters((bodyParameters: nil, urlParameters: ["client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            
         case .topics(let page):
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            
+        case .topicsSearch(_, let page):
             return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .searchPhoto(let query, let page):
