@@ -13,8 +13,8 @@ import UIKit
 class DetailMenuViewController: UIViewController {
     @IBOutlet private weak var detailImage: UIImageView! {
         didSet {
-            self.detailImage.sd_setImage(with: URL(string: dataSource?.photoImage ?? ""))
-            self.detailImage.heroID = dataSource?.photoImage
+            self.detailImage.sd_setImage(with: URL(string: dataSource?.photoImageRegular ?? ""))
+            self.detailImage.heroID = dataSource?.photoImageRegular
         }
     }
     
@@ -54,10 +54,10 @@ class DetailMenuViewController: UIViewController {
         }
     }
     @IBAction private func downloadImage(_ sender: UIButton) {
-        detailViewModel.downloadImage(url: dataSource?.photoImage ?? "")
+        detailViewModel.downloadImage(url: dataSource?.photoImageRegular ?? "")
     }
     @IBAction private func shareLink(_ sender: UIBarButtonItem) {
-        if let linkData = dataSource?.photoImage {
+        if let linkData = dataSource?.photoImageRegular {
             let controller = UIActivityViewController(activityItems: [linkData], applicationActivities: nil)
             self.present(controller, animated: true, completion: nil)
         }

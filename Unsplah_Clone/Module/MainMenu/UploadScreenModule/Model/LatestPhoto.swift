@@ -23,7 +23,7 @@ struct User: Decodable {
     let name: String?
 }
 struct Urls: Decodable {
-    let raw: String?
+    let regular: String?
     let thumb: String?
 }
 

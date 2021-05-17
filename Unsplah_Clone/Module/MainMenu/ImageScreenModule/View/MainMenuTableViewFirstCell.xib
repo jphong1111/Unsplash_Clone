@@ -19,7 +19,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qjs-za-GfJ">
                         <rect key="frame" x="0.0" y="0.0" width="416" height="372"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="372" id="24X-JI-mb9"/>
+                            <constraint firstAttribute="height" constant="372" id="24X-JI-mb9"/>
                             <constraint firstAttribute="width" constant="416" id="4bJ-pX-kuP"/>
                         </constraints>
                     </imageView>

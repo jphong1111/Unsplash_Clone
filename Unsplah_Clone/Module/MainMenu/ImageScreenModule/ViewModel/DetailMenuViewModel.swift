@@ -51,21 +51,6 @@ class DetailMenuViewModel {
             .resume()
         }
     }
-//    func load(URL: NSURL) {
-//        let sessionConfig = URLSessionConfiguration.default
-//        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-//        let request = NSMutableURLRequest(url: URL as URL)
-//        request.httpMethod = "GET"
-//        let task = session.dataTask(with: request as URLRequest, completionHandler: { _, response, error in
-//            if error == nil {
-//                guard let statusCode = (response as? HTTPURLResponse)?.statusCode else { fatalError("no status code") }
-//                print("Success: \(statusCode)")
-//            } else {
-//                print("Failure")
-//            }
-//        })
-//        task.resume()
-//    }
     func addUrlToServer() {
     }
 }
