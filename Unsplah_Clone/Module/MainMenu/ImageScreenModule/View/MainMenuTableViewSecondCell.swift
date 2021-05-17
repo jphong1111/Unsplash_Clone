@@ -7,5 +7,5 @@
 
 import UIKit
 
-class MainMenuTableViewSecondCell: UITableViewCell, CellReusable {
+class MainMenuTableViewSecondCell: UITableViewCell {
 }

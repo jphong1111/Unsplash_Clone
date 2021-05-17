@@ -42,9 +42,7 @@ class MainMenuViewController: UIViewController {
         }
     }
     func getHeader() {
-        let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))
-        headerView.imageView?.image = UIImage(named: "startImage")
-        self.tableView.tableHeaderView = headerView
+        viewModel.addHeaderView(in: tableView, view: self.view)
     }
 }
 extension MainMenuViewController: UITableViewDataSource {

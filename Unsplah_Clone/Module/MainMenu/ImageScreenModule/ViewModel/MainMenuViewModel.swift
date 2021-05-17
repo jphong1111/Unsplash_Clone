@@ -65,7 +65,7 @@ class MainMenuViewModel {
     func topicFind(for indexPath: IndexPath) -> String {
         collectionDataSource[indexPath.row].lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    // MARK: - photo configure functions
+    // MARK: - tableview configure functions
     func numberOfPhotos() -> Int {
         self.dataSource.count
     }
@@ -85,5 +85,20 @@ class MainMenuViewModel {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let detailViewController = storyboard.instantiateViewController(identifier: "DetailMenuViewController") as? DetailMenuViewController else { fatalError("error occur") }
         detailViewController.dataSource = photoData
+    }
+    func addHeaderView(in tableView: UITableView, view: UIView) {
+        let label = UILabel()
+        label.text = "Photos for everyone"
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 25.0)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 250))
+        headerView.imageView?.image = UIImage(named: "startImage")
+        headerView.addSubview(label)
+        let xConstraint = NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: headerView, attribute: .centerX, multiplier: 1, constant: 0)
+
+        let yConstraint = NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: headerView, attribute: .centerY, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activate([yConstraint, xConstraint])
+        tableView.tableHeaderView = headerView
     }
 }
