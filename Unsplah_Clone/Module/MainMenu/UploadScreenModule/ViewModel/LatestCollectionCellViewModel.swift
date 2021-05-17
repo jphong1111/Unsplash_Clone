@@ -22,7 +22,7 @@ class LatestCollectionCellViewModel: LatestCollectionCellViewModelProtocol {
     }
     
     var imageView: String {
-        latestPhoto.urls.small ?? ""
+        latestPhoto.urls.thumb ?? ""
     }
     
     var title: String {

@@ -39,14 +39,18 @@ class MainMenuViewModel {
         }
     }
     func fetchPhotoByCollection(topics: String) {
-        self.router.request(PhotoAPI.topicsSearch(topic: topics, page: "\(Int.random(in: 1..<10))")) { [weak self] (result: Result<[Photos], AppError>) in
-            switch result {
-            case .success(let photos):
-                self?.dataSource = photos.compactMap { MainMenuTableViewFirstViewModel(photos: $0) }
+        if topics != "editorial" {
+            self.router.request(PhotoAPI.topicsSearch(topic: topics, page: "\(Int.random(in: 1..<10))")) { [weak self] (result: Result<[Photos], AppError>)  in
+                switch result {
+                case .success(let photos):
+                    self?.dataSource = photos.compactMap { MainMenuTableViewFirstViewModel(photos: $0) }
                 
-            case .failure(let error):
-                self?.delegate?.show(error: error)
+                case .failure(let error):
+                    self?.delegate?.show(error: error)
+                }
             }
+        } else {
+            fetchPhoto()
         }
     }
     // MARK: - CollectionView configure functions

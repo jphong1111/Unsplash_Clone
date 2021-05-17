@@ -5,6 +5,7 @@
 //  Created by JungpyoHong on 5/13/21.
 //
 
+import Firebase
 import Hero
 import SDWebImage
 import UIKit
@@ -18,6 +19,7 @@ class DetailMenuViewController: UIViewController {
     }
     
     @IBOutlet private weak var heartButton: UIButton!
+    @IBOutlet private weak var collectionButton: UIButton!
     @IBOutlet private weak var authorButton: UIButton! {
         didSet {
             self.authorButton.setTitle(dataSource?.author, for: .normal)
@@ -34,11 +36,25 @@ class DetailMenuViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction private func isHeartClicked(_ sender: UIButton) {
-        
+        if Auth.auth().currentUser != nil {
         heartButton.setImage(UIImage(named: "heart"), for: .selected)
         heartButton.setImage(UIImage(named: "heartFill"), for: .selected)
         heartButton.setImage(UIImage(named: "heartFill"), for: [.selected, .highlighted])
         heartButton.isSelected = !heartButton.isSelected
+        } else {
+            performSegue(withIdentifier: "isLogIn", sender: nil)
+        }
+    }
+    @IBAction private func isCollectionClicked(_ sender: UIButton) {
+        if Auth.auth().currentUser != nil {
+            // add current url to firestore
+            detailViewModel.addUrlToServer()
+        } else {
+            performSegue(withIdentifier: "isLogIn", sender: nil)
+        }
+    }
+    @IBAction private func downloadImage(_ sender: UIButton) {
+        detailViewModel.downloadImage(url: dataSource?.photoImage ?? "")
     }
     @IBAction private func shareLink(_ sender: UIBarButtonItem) {
         if let linkData = dataSource?.photoImage {
@@ -50,7 +66,6 @@ class DetailMenuViewController: UIViewController {
         detailViewModel.heroTouchImage(sender: sender, viewController: self, image: detailImage)
     }
     @IBAction private func toAuthorPage(_ sender: UIButton) {
-        // let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let authorDetailViewController = storyboard?.instantiateViewController(identifier: "AuthorDetailViewController") as? AuthorDetailViewController else { return }
         self.navigationController?.pushViewController(authorDetailViewController, animated: true)
     }
