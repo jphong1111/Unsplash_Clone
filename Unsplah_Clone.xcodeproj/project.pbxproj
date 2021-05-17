@@ -15,6 +15,12 @@
 		9538F0FF264F165E00DC1CD7 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F0FE264F165E00DC1CD7 /* PhotoInfo.swift */; };
 		9538F102264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F101264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift */; };
 		9538F10C2651126600DC1CD7 /* StretchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F10B2651126600DC1CD7 /* StretchyTableHeaderView.swift */; };
+		9538F1112652ED4000DC1CD7 /* LogInPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F1102652ED4000DC1CD7 /* LogInPopUpViewController.swift */; };
+		9538F115265307AC00DC1CD7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F114265307AC00DC1CD7 /* UserData.swift */; };
+		9538F11926530E4200DC1CD7 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F11826530E4200DC1CD7 /* AccountTableViewCell.swift */; };
+		9538F11C26530F0F00DC1CD7 /* AccountTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F11B26530F0F00DC1CD7 /* AccountTableViewCellViewModel.swift */; };
+		9538F11F26531B4C00DC1CD7 /* UserCollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F11E26531B4C00DC1CD7 /* UserCollectionData.swift */; };
+		9538F12226531BEB00DC1CD7 /* UserPhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F12126531BEB00DC1CD7 /* UserPhotoData.swift */; };
 		95986006264A4A9800C0C73C /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986005264A4A9800C0C73C /* JSONParameterEncoder.swift */; };
 		9598600B264A4ABB00C0C73C /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598600A264A4ABB00C0C73C /* ParameterEncoder.swift */; };
 		9598600E264A4AD000C0C73C /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598600D264A4AD000C0C73C /* URLParameterEncoder.swift */; };
@@ -89,6 +95,12 @@
 		9538F0FE264F165E00DC1CD7 /* PhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		9538F101264F1BCB00DC1CD7 /* DetailInfoDescribeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoDescribeViewModel.swift; sourceTree = "<group>"; };
 		9538F10B2651126600DC1CD7 /* StretchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyTableHeaderView.swift; sourceTree = "<group>"; };
+		9538F1102652ED4000DC1CD7 /* LogInPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPopUpViewController.swift; sourceTree = "<group>"; };
+		9538F114265307AC00DC1CD7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		9538F11826530E4200DC1CD7 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		9538F11B26530F0F00DC1CD7 /* AccountTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		9538F11E26531B4C00DC1CD7 /* UserCollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionData.swift; sourceTree = "<group>"; };
+		9538F12126531BEB00DC1CD7 /* UserPhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoData.swift; sourceTree = "<group>"; };
 		95986005264A4A9800C0C73C /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		9598600A264A4ABB00C0C73C /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		9598600D264A4AD000C0C73C /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
@@ -359,6 +371,7 @@
 				95AE9EBD2645C910002D956F /* RegisterViewController.swift */,
 				95AE9ECE26472BE8002D956F /* ResetViewController.swift */,
 				95AE9ED526479305002D956F /* AccountViewController.swift */,
+				9538F1102652ED4000DC1CD7 /* LogInPopUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -366,6 +379,7 @@
 		95AE9EBA2645C8E5002D956F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9538F11826530E4200DC1CD7 /* AccountTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +387,9 @@
 		95AE9EBB2645C8EC002D956F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9538F114265307AC00DC1CD7 /* UserData.swift */,
+				9538F11E26531B4C00DC1CD7 /* UserCollectionData.swift */,
+				9538F12126531BEB00DC1CD7 /* UserPhotoData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,6 +399,7 @@
 			children = (
 				95AE9ED126473361002D956F /* RegisterViewModel.swift */,
 				95AE9EEC2647C794002D956F /* AccountViewModel.swift */,
+				9538F11B26530F0F00DC1CD7 /* AccountTableViewCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -682,6 +700,7 @@
 				95986035264AF0C500C0C73C /* PhotoTopic.swift in Sources */,
 				95AE9F192649C8F7002D956F /* LatestCollectionCellViewModel.swift in Sources */,
 				9538F0EC264E327100DC1CD7 /* DetailMenuViewController.swift in Sources */,
+				9538F11C26530F0F00DC1CD7 /* AccountTableViewCellViewModel.swift in Sources */,
 				95AE9F0426487450002D956F /* ImagePicker.swift in Sources */,
 				95AE9ED226473361002D956F /* RegisterViewModel.swift in Sources */,
 				95AE9EBE2645C910002D956F /* RegisterViewController.swift in Sources */,
@@ -695,6 +714,7 @@
 				95986079264D828000C0C73C /* Photos.swift in Sources */,
 				95AE9ED626479305002D956F /* AccountViewController.swift in Sources */,
 				95AE9F152649C861002D956F /* LatestCollectionViewCell.swift in Sources */,
+				9538F11F26531B4C00DC1CD7 /* UserCollectionData.swift in Sources */,
 				95986039264AFC1E00C0C73C /* SearchViewModel.swift in Sources */,
 				9538F0FC264F162D00DC1CD7 /* DetailInfoViewModel.swift in Sources */,
 				95986081264D91FB00C0C73C /* MainCollectionViewCell.swift in Sources */,
@@ -709,19 +729,23 @@
 				95986012264A4AF100C0C73C /* HTTPMethod.swift in Sources */,
 				95AE9F1C2649CD08002D956F /* LatestPhoto.swift in Sources */,
 				9538F0F5264EE1E800DC1CD7 /* AuthorDetailViewController.swift in Sources */,
+				9538F1112652ED4000DC1CD7 /* LogInPopUpViewController.swift in Sources */,
 				9538F0FF264F165E00DC1CD7 /* PhotoInfo.swift in Sources */,
 				95AE9EE22647BE5E002D956F /* UploadViewModel.swift in Sources */,
 				95AE9ECC2645E448002D956F /* StringColor.swift in Sources */,
+				9538F11926530E4200DC1CD7 /* AccountTableViewCell.swift in Sources */,
 				9538F0F1264EC4AB00DC1CD7 /* DetailMenuViewModel.swift in Sources */,
 				95AE9EA426459FBA002D956F /* MainMenuViewModel.swift in Sources */,
 				95AE9F102649C4A4002D956F /* SearchViewController.swift in Sources */,
 				95986054264B1C5800C0C73C /* SearchTableViewCell.swift in Sources */,
 				95AE9EB02645A3C3002D956F /* MainMenuTableViewSecondCell.swift in Sources */,
 				95986069264C6FCF00C0C73C /* SearchUser.swift in Sources */,
+				9538F12226531BEB00DC1CD7 /* UserPhotoData.swift in Sources */,
 				95AE9EAD2645A322002D956F /* MainMenuTableViewFirstCell.swift in Sources */,
 				9598604E264B1A8E00C0C73C /* SearchPhoto.swift in Sources */,
 				95986022264A4B6800C0C73C /* EndPointType.swift in Sources */,
 				9598601C264A4B3000C0C73C /* NetworkResponse.swift in Sources */,
+				9538F115265307AC00DC1CD7 /* UserData.swift in Sources */,
 				95986016264A4B0500C0C73C /* HTTPTask.swift in Sources */,
 				9538F10C2651126600DC1CD7 /* StretchyTableHeaderView.swift in Sources */,
 				9598606D264C9E6600C0C73C /* SearchUserTableViewCell.swift in Sources */,

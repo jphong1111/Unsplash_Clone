@@ -36,19 +36,23 @@ class DetailMenuViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction private func isHeartClicked(_ sender: UIButton) {
-        if Auth.auth().currentUser != nil {
-        heartButton.setImage(UIImage(named: "heart"), for: .selected)
-        heartButton.setImage(UIImage(named: "heartFill"), for: .selected)
-        heartButton.setImage(UIImage(named: "heartFill"), for: [.selected, .highlighted])
-        heartButton.isSelected = !heartButton.isSelected
-        } else {
+        if Auth.auth().currentUser == nil {
             performSegue(withIdentifier: "isLogIn", sender: nil)
+        } else if heartButton.isSelected {
+            print("second")
+            heartButton.isSelected = !heartButton.isSelected
+        } else {
+            print("third")
+            detailViewModel.addUrlToServer(url: dataSource?.photoImageSmall ?? "not thing stored", author: dataSource?.author ?? "no author")
+            heartButton.setImage(UIImage(named: "heart"), for: .selected)
+            heartButton.setImage(UIImage(named: "heartFill"), for: .selected)
+            heartButton.setImage(UIImage(named: "heartFill"), for: [.selected, .highlighted])
+            heartButton.isSelected = !heartButton.isSelected
         }
     }
     @IBAction private func isCollectionClicked(_ sender: UIButton) {
         if Auth.auth().currentUser != nil {
             // add current url to firestore
-            detailViewModel.addUrlToServer()
         } else {
             performSegue(withIdentifier: "isLogIn", sender: nil)
         }

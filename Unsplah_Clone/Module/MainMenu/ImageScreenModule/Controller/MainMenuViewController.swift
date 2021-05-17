@@ -13,6 +13,7 @@ class MainMenuViewController: UIViewController {
         didSet {
             self.tableView.dataSource = self
             self.tableView.delegate = self
+            self.tableView.backgroundColor = Color.realBlack.color
             self.tableView.register(UINib(nibName: "MainMenuTableViewFirstCell", bundle: nil), forCellReuseIdentifier: "MainMenuTableViewFirstCell")
             self.tableView.reloadData()
         }

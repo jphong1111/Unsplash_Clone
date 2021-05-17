@@ -5,6 +5,7 @@
 //  Created by JungpyoHong on 5/9/21.
 //
 
+import Firebase
 import UIKit
 
 class UploadViewController: UIViewController {
@@ -33,7 +34,11 @@ class UploadViewController: UIViewController {
     }
     
     @IBAction private func contributeImage(_ sender: UIButton) {
-        self.imagePicker.present(from: sender)
+        if Auth.auth().currentUser != nil {
+            self.imagePicker.present(from: sender)
+        } else {
+            performSegue(withIdentifier: "collaborateLogIn", sender: nil)
+        }
     }
 }
 extension UploadViewController: UICollectionViewDataSource {

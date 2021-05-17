@@ -140,6 +140,7 @@
                     <connections>
                         <outlet property="collectionView" destination="sxs-ww-9E4" id="SFE-Xm-my6"/>
                         <segue destination="ebc-nh-Pz0" kind="showDetail" identifier="Contributed" id="VzM-dw-Whi"/>
+                        <segue destination="Wdz-ys-j3L" kind="presentation" identifier="collaborateLogIn" id="OoU-Ef-4ah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b23-op-YaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1202,10 +1203,10 @@
             </objects>
             <point key="canvasLocation" x="5270" y="-908"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In Pop Up View Controller-->
         <scene sceneID="uSS-cN-Yzn">
             <objects>
-                <viewController id="Wdz-ys-j3L" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInPopUpViewController" id="Wdz-ys-j3L" customClass="LogInPopUpViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H9b-TY-jt0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1355,12 +1356,22 @@
                             <constraint firstItem="Epz-8K-OKz" firstAttribute="centerY" secondItem="H9b-TY-jt0" secondAttribute="centerY" id="rwy-AZ-QRP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="dda-cH-q7z" id="PDM-2P-atb"/>
+                        <outlet property="emailTextField" destination="8aR-yA-jxC" id="nO9-fu-3YV"/>
+                        <outlet property="logInViewContainer" destination="Epz-8K-OKz" id="jmn-CT-Ycg"/>
+                        <outlet property="passwordTextField" destination="15H-K5-URw" id="85b-8a-FuC"/>
+                        <outlet property="pressedJoin" destination="xiY-i9-AvV" id="GVm-mP-SRT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUS-5X-Czy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5269.5652173913049" y="-222.32142857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OoU-Ef-4ah"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="dismiss" width="48" height="36"/>
         <image name="download" width="64" height="64"/>

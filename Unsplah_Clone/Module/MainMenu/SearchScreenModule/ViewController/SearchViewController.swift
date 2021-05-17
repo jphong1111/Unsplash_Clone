@@ -24,7 +24,13 @@ class SearchViewController: UIViewController {
         }
     }
     @IBOutlet private weak var settingButton: UIButton!
-    @IBOutlet private weak var segmentControl: UISegmentedControl!
+    @IBOutlet private weak var segmentControl: UISegmentedControl! {
+        didSet {
+            self.segmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
+            self.segmentControl.selectedSegmentTintColor = Color.lightGray.color
+            self.segmentControl.backgroundColor = Color.heavyGray.color
+        }
+    }
 
     lazy var viewModel = SearchViewModel(delegate: self)
     

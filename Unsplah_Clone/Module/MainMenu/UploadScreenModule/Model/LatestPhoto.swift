@@ -24,6 +24,7 @@ struct User: Decodable {
 }
 struct Urls: Decodable {
     let regular: String?
+    let small: String?
     let thumb: String?
 }
 

@@ -9,6 +9,8 @@ import UIKit
 
 enum Color: String {
     case realBlack
+    case lightGray
+    case heavyGray
     
     var color: UIColor {
         switch self.rawValue {
@@ -17,6 +19,12 @@ enum Color: String {
             
         case "lightBlack":
             return UIColor(cgColor: CGColor(red: 25 / 255, green: 25 / 255, blue: 25 / 255, alpha: 255 / 255))
+        
+        case "lightGray":
+            return UIColor(cgColor: CGColor(red: 100 / 255, green: 99 / 255, blue: 105 / 255, alpha: 255 / 255))
+            
+        case "heavyGray":
+            return UIColor(cgColor: CGColor(red: 41 / 255, green: 40 / 255, blue: 45 / 255, alpha: 255 / 255))
             
         default:
             return .clear

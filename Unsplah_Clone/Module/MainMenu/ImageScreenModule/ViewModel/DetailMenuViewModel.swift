@@ -5,10 +5,13 @@
 //  Created by JungpyoHong on 5/14/21.
 //
 
+import Firebase
 import Hero
 import UIKit
 
 class DetailMenuViewModel {
+    let db = Firestore.firestore()
+    
     func heroTouchImage(sender: UIPanGestureRecognizer, viewController: UIViewController, image: UIImageView) {
         let translation = sender.translation(in: nil)
         let progress = translation.y / 2 / viewController.view.bounds.height
@@ -51,6 +54,12 @@ class DetailMenuViewModel {
             .resume()
         }
     }
-    func addUrlToServer() {
+    func addUrlToServer(url: String, author: String) {
+        guard let uid = Auth.auth().currentUser?.uid else { fatalError("error in current user") }
+        db.collection("photoUrl").addDocument(data: ["uid": uid, "url": url, "author": author]) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
