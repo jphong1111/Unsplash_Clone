@@ -21,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contribute to Unsplash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-YE-Nyb">
-                                <rect key="frame" x="15" y="103" width="384" height="26.5"/>
+                                <rect key="frame" x="15" y="15" width="384" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5D-5A-5Ew">
-                                <rect key="frame" x="15" y="144.5" width="384" height="384"/>
+                                <rect key="frame" x="15" y="56.5" width="384" height="384"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="384" id="5wd-BX-snB"/>
                                     <constraint firstAttribute="width" constant="384" id="X2N-aD-H6w"/>
@@ -38,13 +38,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest from the blog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2g-8D-OTR">
-                                <rect key="frame" x="15" y="548.5" width="158" height="20.5"/>
+                                <rect key="frame" x="15" y="460.5" width="158" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sxs-ww-9E4">
-                                <rect key="frame" x="15" y="574" width="384" height="224"/>
+                                <rect key="frame" x="15" y="486" width="384" height="224"/>
                                 <color key="backgroundColor" name="RealBlack"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uY5-34-U9g">
                                     <size key="itemSize" width="301" height="213"/>
@@ -803,7 +803,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Pz-6L-nLU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="third.Screen" selectedImage="third.Screen" id="uSa-AP-P8e"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0yf-P8-hzs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0yf-P8-hzs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

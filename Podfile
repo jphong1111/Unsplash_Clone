@@ -10,4 +10,5 @@ pod 'SDWebImage'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Hero'
+pod 'IQKeyboardManagerSwift'
 end

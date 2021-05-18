@@ -21,15 +21,17 @@ class ResetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.backItem?.backButtonTitle = "Login"
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.barTintColor = .black
+        self.navigationController?.navigationBar.barTintColor = Color.realBlack.color
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.backItem?.backButtonTitle = "Login"
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.barTintColor = .black
+        self.navigationController?.navigationBar.barTintColor = Color.realBlack.color
+        self.navigationController?.navigationBar.isTranslucent = false
     }
 }
