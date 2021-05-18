@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct UserCollectionData {
+struct UserCollectionData: Hashable {
     let photoUrl: String
 }

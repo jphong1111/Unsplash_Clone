@@ -13,17 +13,17 @@ protocol AccountTableViewCellViewModelProtocol {
 }
 class AccountTableViewCellViewModel: AccountTableViewCellViewModelProtocol {
     
-    let userData: UserData
+    let userLikeData: UserLikeData
     
-    init(userData: UserData) {
-        self.userData = userData
+    init(userLikeData: UserLikeData) {
+        self.userLikeData = userLikeData
     }
     
     var photoImage: String {
-        userData.url
+        userLikeData.url
     }
     
     var author: String {
-        userData.author
+        userLikeData.author
     }
 }

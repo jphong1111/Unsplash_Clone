@@ -12,7 +12,7 @@ class AccountViewController: UIViewController {
     @IBOutlet private weak var shareButton: UIButton!
     @IBOutlet private weak var profileImage: UIImageView! {
         didSet {
-            ReusableComponent.addRadiusForImage(profileImage)
+            ReusableComponent.addCircleShapeForImage(profileImage)
         }
     }
     @IBOutlet private weak var userNameLabel: UILabel!

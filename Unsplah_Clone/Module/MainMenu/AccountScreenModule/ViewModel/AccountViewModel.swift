@@ -21,7 +21,7 @@ class AccountViewModel {
             self.delegate?.reload()
         }
     }
-    private var likeDataSource = [UserData]() {
+    private var likeDataSource = [UserLikeData]() {
         didSet {
             self.delegate?.reload()
         }
@@ -85,7 +85,8 @@ class AccountViewModel {
                         let data = doc.data()
                         if let author = data["author"] as? String, let url = data["url"] as? String, let userID = data["uid"] as? String {
                             if userID == Auth.auth().currentUser?.uid {
-                                self.likeDataSource.append(UserData(author: author, url: url))
+                                self.likeDataSource.append(UserLikeData(author: author, url: url))
+                                self.likeDataSource = self.likeDataSource.removingDuplicates()
                             }
                         }
                     }
