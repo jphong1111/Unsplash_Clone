@@ -12,7 +12,7 @@ class LogInPopUpViewController: UIViewController {
 
     @IBOutlet private weak var logInViewContainer: UIView! {
         didSet {
-            ReusableComponent.addRadiusForButton(self.logInViewContainer)
+            ReusableComponent.addMoreRadiusForView(self.logInViewContainer)
         }
     }
     @IBOutlet private weak var cancelButton: UIButton!

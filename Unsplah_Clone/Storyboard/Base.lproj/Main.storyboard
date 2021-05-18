@@ -17,7 +17,7 @@
             <objects>
                 <viewController storyboardIdentifier="UploadViewController" id="wB0-m4-BnC" customClass="UploadViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fXQ-1Z-IMZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contribute to Unsplash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-YE-Nyb">
@@ -152,7 +152,7 @@
             <objects>
                 <viewController id="ebc-nh-Pz0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4j3-bl-Q1T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="OOh-si-zfu"/>
                         <color key="backgroundColor" name="RealBlack"/>
@@ -168,7 +168,7 @@
             <objects>
                 <viewController storyboardIdentifier="SubMenuViewController" id="QMp-kt-svg" customClass="SubMenuViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ex-S3-fsX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-Or-9e6">
@@ -336,7 +336,7 @@
             <objects>
                 <viewController storyboardIdentifier="MainMenuViewController" id="Llh-qI-dsb" customClass="MainMenuViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Piq-BZ-SkA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9to-Ym-BLm">
@@ -447,7 +447,7 @@
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="6rG-Uc-wdc" customClass="SearchViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J6G-ep-xUd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oi5-an-A30">
@@ -568,7 +568,7 @@
             <objects>
                 <viewController id="gLV-Jb-UZR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPV-6K-pUe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-bJ-Pkb">
@@ -821,7 +821,7 @@
             <objects>
                 <viewController storyboardIdentifier="DetailMenuViewController" id="7Hg-nz-D1k" customClass="DetailMenuViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ng-8r-fY8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9M3-EO-Jjs">
@@ -960,7 +960,7 @@
             <objects>
                 <viewController storyboardIdentifier="DetailInfoViewController" id="Vqz-8S-sii" customClass="DetailInfoViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oE7-OF-nyy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qu-tX-Dmx">
@@ -1208,7 +1208,7 @@
             <objects>
                 <viewController storyboardIdentifier="LogInPopUpViewController" id="Wdz-ys-j3L" customClass="LogInPopUpViewController" customModule="Unsplah_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H9b-TY-jt0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Epz-8K-OKz">
@@ -1218,7 +1218,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dda-cH-q7z">
-                                                <rect key="frame" x="5" y="5" width="48" height="30"/>
+                                                <rect key="frame" x="10" y="5" width="52" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -1241,7 +1242,7 @@
                                             <constraint firstItem="dda-cH-q7z" firstAttribute="top" secondItem="J2E-TY-ye8" secondAttribute="top" constant="5" id="JI6-uO-m6c"/>
                                             <constraint firstAttribute="bottom" secondItem="dda-cH-q7z" secondAttribute="bottom" constant="5" id="X8m-jH-Kzx"/>
                                             <constraint firstItem="rWK-LO-r1U" firstAttribute="leading" relation="lessThanOrEqual" secondItem="dda-cH-q7z" secondAttribute="trailing" constant="118" id="ahF-Kx-fvg"/>
-                                            <constraint firstItem="dda-cH-q7z" firstAttribute="leading" secondItem="J2E-TY-ye8" secondAttribute="leading" constant="5" id="laU-oR-qJQ"/>
+                                            <constraint firstItem="dda-cH-q7z" firstAttribute="leading" secondItem="J2E-TY-ye8" secondAttribute="leading" constant="10" id="laU-oR-qJQ"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-tX-nAw" userLabel="Email View">

@@ -12,7 +12,7 @@ class LatestCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private weak var imageView: UIImageView! {
         didSet {
-            ReusableComponent.addRadiusForButton(self.imageView)
+            ReusableComponent.addRadiusForView(self.imageView)
         }
     }
     @IBOutlet private weak var titleLabel: UILabel!

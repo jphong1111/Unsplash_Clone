@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private weak var logInContainer: UIView! {
         didSet {
-            ReusableComponent.addRadiusForButton(logInContainer)
+            ReusableComponent.addRadiusForView(logInContainer)
         }
     }
     

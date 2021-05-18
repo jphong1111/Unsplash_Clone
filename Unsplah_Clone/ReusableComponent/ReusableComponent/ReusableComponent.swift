@@ -9,11 +9,12 @@ import UIKit
 
 enum ReusableComponent {
     
-    static func addRadiusForButton(_ view: UIView) {
-        // view.layer.shadowOpacity = 0.5
-        // view.layer.shadowOffset = CGSize(width: 0, height: 3)
-        //  view.layer.shadowRadius = 5
+    static func addRadiusForView(_ view: UIView) {
         view.layer.cornerRadius = 5
+        view.layer.masksToBounds = true
+    }
+    static func addMoreRadiusForView(_ view: UIView) {
+        view.layer.cornerRadius = 10
         view.layer.masksToBounds = true
     }
     static func addRadiusForImage(_ view: UIView) {
