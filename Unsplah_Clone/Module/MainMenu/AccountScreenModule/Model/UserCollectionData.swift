@@ -9,4 +9,5 @@ import Foundation
 
 struct UserCollectionData: Hashable {
     let photoUrl: String
+    let author: String
 }

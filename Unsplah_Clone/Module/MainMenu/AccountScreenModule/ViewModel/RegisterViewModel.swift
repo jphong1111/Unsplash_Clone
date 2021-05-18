@@ -16,7 +16,9 @@ class RegisterViewModel {
         if let email = email.text, let password = password.text {
             Auth.auth().createUser(withEmail: email, password: password) { user, error in
                 if let error = error {
-                    print(error)
+                    print(error.localizedDescription)
+                    let alert = ReusableComponent.alertMessage(title: "Signup Error", message: "Password or ID is invalid try again")
+                    controller.present(alert, animated: true, completion: nil)
                 } else {
                     print("Create Success")
                     guard let firstName = firstName.text, let lastName = lastName.text, let userName = userName.text, let user = user else { fatalError("user info invalid") }

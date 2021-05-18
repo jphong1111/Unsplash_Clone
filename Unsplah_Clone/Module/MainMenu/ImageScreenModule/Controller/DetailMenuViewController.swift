@@ -52,7 +52,8 @@ class DetailMenuViewController: UIViewController {
     }
     @IBAction private func isCollectionClicked(_ sender: UIButton) {
         if Auth.auth().currentUser != nil {
-            // add current url to firestore
+            detailViewModel.addCollectionToServer(url: dataSource?.photoImageSmall ?? "not thing stored", author: dataSource?.author ?? "no author")
+            self.present(ReusableComponent.alertMessage(title: "Collection Added", message: "This Photo is Added to your Collection"), animated: true)
         } else {
             performSegue(withIdentifier: "isLogIn", sender: nil)
         }

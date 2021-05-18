@@ -43,6 +43,8 @@ class LoginViewController: UIViewController {
     
     @IBAction private func loginPressed(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextfield.text {
+            emailTextField.text = ""
+            passwordTextfield.text = ""
                     Auth.auth().signIn(withEmail: email, password: password) { _, error in
                         if let error = error {
                             print(error)

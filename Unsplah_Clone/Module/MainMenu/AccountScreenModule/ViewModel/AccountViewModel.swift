@@ -53,6 +53,13 @@ class AccountViewModel {
         cell.configure(author: photo.author, photoImage: photo.url)
         return cell
     }
+    func configureCollectionCell(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+        guard let cell: AccountTableViewCollectionCell = tableView.dequeueReusableCell(withIdentifier: "AccountTableViewCollectionCell") as? AccountTableViewCollectionCell
+        else { fatalError("not find") }
+        let photo = collectionDataSource[indexPath.row]
+        cell.configure(photoImage: photo.photoUrl, author: photo.author)
+        return cell
+    }
     func getUserName(nameLabel: UILabel) {
         // guard let currentUser = Auth.auth().currentUser?.uid else { return }
         db.collection("users").addSnapshotListener { querySnapshot, error in
@@ -87,6 +94,25 @@ class AccountViewModel {
                             if userID == Auth.auth().currentUser?.uid {
                                 self.likeDataSource.append(UserLikeData(author: author, url: url))
                                 self.likeDataSource = self.likeDataSource.removingDuplicates()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    func fetchCollectionFromServer() {
+        db.collection("collectionUrl").addSnapshotListener { querySnapshot, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let author = data["author"] as? String, let url = data["url"] as? String, let userID = data["uid"] as? String {
+                            if userID == Auth.auth().currentUser?.uid {
+                                self.collectionDataSource.append(UserCollectionData(photoUrl: url, author: author))
+                                self.collectionDataSource = self.collectionDataSource.removingDuplicates()
                             }
                         }
                     }

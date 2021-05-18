@@ -5,6 +5,7 @@
 //  Created by JungpyoHong on 5/8/21.
 //
 
+import Firebase
 import UIKit
 
 class AccountViewController: UIViewController {
@@ -30,6 +31,7 @@ class AccountViewController: UIViewController {
             self.tableview.dataSource = self
             self.tableview.delegate = self
             self.tableview.backgroundColor = Color.realBlack.color
+            self.tableview.register(UINib(nibName: "AccountTableViewCollectionCell", bundle: nil), forCellReuseIdentifier: "AccountTableViewCollectionCell")
             self.tableview.reloadData()
         }
     }
@@ -38,24 +40,36 @@ class AccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isLoggedIn()
         getUserID()
         viewModel.fetchLikeFromServer()
+        viewModel.fetchCollectionFromServer()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        isLoggedIn()
         navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
+        if Auth.auth().currentUser == nil {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
-    
+
     func getUserID() {
         viewModel.getUserName(nameLabel: userNameLabel)
     }
     @IBAction private func isClicked(_ sender: UISegmentedControl) {
         self.tableview.reloadData()
+    }
+    func isLoggedIn() {
+        if Auth.auth().currentUser == nil {
+            performSegue(withIdentifier: "ToLogIn", sender: nil)
+        }
     }
 }
 extension AccountViewController: UITableViewDataSource {
@@ -111,7 +125,7 @@ extension AccountViewController: UITableViewDataSource {
             return viewModel.configureLikeCell(in: tableview, for: indexPath)
             
         case 2:
-            return viewModel.configureLikeCell(in: tableview, for: indexPath)
+            return viewModel.configureCollectionCell(in: tableview, for: indexPath)
             
         default:
             fatalError("segment control error")

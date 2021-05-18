@@ -21,6 +21,8 @@
 		9538F11C26530F0F00DC1CD7 /* AccountTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F11B26530F0F00DC1CD7 /* AccountTableViewCellViewModel.swift */; };
 		9538F11F26531B4C00DC1CD7 /* UserCollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F11E26531B4C00DC1CD7 /* UserCollectionData.swift */; };
 		9538F12226531BEB00DC1CD7 /* UserPhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F12126531BEB00DC1CD7 /* UserPhotoData.swift */; };
+		9538F13B26541D8900DC1CD7 /* AccountTableViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538F13A26541D8900DC1CD7 /* AccountTableViewCollectionCell.swift */; };
+		9538F13E26541E2E00DC1CD7 /* AccountTableViewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9538F13D26541E2E00DC1CD7 /* AccountTableViewCollectionCell.xib */; };
 		95986006264A4A9800C0C73C /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986005264A4A9800C0C73C /* JSONParameterEncoder.swift */; };
 		9598600B264A4ABB00C0C73C /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598600A264A4ABB00C0C73C /* ParameterEncoder.swift */; };
 		9598600E264A4AD000C0C73C /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598600D264A4AD000C0C73C /* URLParameterEncoder.swift */; };
@@ -101,6 +103,8 @@
 		9538F11B26530F0F00DC1CD7 /* AccountTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		9538F11E26531B4C00DC1CD7 /* UserCollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionData.swift; sourceTree = "<group>"; };
 		9538F12126531BEB00DC1CD7 /* UserPhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoData.swift; sourceTree = "<group>"; };
+		9538F13A26541D8900DC1CD7 /* AccountTableViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCollectionCell.swift; sourceTree = "<group>"; };
+		9538F13D26541E2E00DC1CD7 /* AccountTableViewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCollectionCell.xib; sourceTree = "<group>"; };
 		95986005264A4A9800C0C73C /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		9598600A264A4ABB00C0C73C /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		9598600D264A4AD000C0C73C /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
@@ -380,6 +384,8 @@
 			isa = PBXGroup;
 			children = (
 				9538F11826530E4200DC1CD7 /* AccountTableViewCell.swift */,
+				9538F13A26541D8900DC1CD7 /* AccountTableViewCollectionCell.swift */,
+				9538F13D26541E2E00DC1CD7 /* AccountTableViewCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95986065264C40EC00C0C73C /* SearchCollectionTableViewCell.xib in Resources */,
+				9538F13E26541E2E00DC1CD7 /* AccountTableViewCollectionCell.xib in Resources */,
 				95986071264C9ECC00C0C73C /* SearchUserTableViewCell.xib in Resources */,
 				95F00435264298C4004E85CF /* LaunchScreen.storyboard in Resources */,
 				95F00432264298C4004E85CF /* Assets.xcassets in Resources */,
@@ -709,6 +716,7 @@
 				95AE9EED2647C794002D956F /* AccountViewModel.swift in Sources */,
 				95AE9EC82645DCD9002D956F /* Color.swift in Sources */,
 				95F0042D264298BF004E85CF /* StartViewController.swift in Sources */,
+				9538F13B26541D8900DC1CD7 /* AccountTableViewCollectionCell.swift in Sources */,
 				95AE9F0926499242002D956F /* SubMenuViewController.swift in Sources */,
 				95986006264A4A9800C0C73C /* JSONParameterEncoder.swift in Sources */,
 				95986079264D828000C0C73C /* Photos.swift in Sources */,
