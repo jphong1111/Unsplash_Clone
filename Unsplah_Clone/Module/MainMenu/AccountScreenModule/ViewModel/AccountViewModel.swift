@@ -13,7 +13,7 @@ protocol AccountViewModelDelegate: AnyObject {
     func show(error: AppError)
 }
 class AccountViewModel {
-
+    
     let db = Firestore.firestore()
     
     private var photoDataSource = [UserPhotoData]() {
@@ -31,12 +31,28 @@ class AccountViewModel {
             self.delegate?.reload()
         }
     }
-
+    
     weak var delegate: AccountViewModelDelegate?
     
     init(delegate: AccountViewModelDelegate) {
         self.delegate = delegate
     }
+    func logIn(emailTextField: UITextField, passwordTextField: UITextField, viewController: UIViewController) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            emailTextField.text = ""
+            passwordTextField.text = ""
+            Auth.auth().signIn(withEmail: email, password: password) { _, error in
+                if let error = error {
+                    print(error)
+                    let alert = ReusableComponent.alertMessage(title: "Login Error", message: "Password or ID is invalid try again")
+                    viewController.present(alert, animated: true, completion: nil)
+                } else {
+                    viewController.performSegue(withIdentifier: "CompleteLogIn", sender: nil)
+                }
+            }
+        }
+    }
+    
     func numberOfPhotoLow() -> Int {
         photoDataSource.count
     }

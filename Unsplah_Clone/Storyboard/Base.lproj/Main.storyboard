@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E69-sJ-pZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4054" y="919"/>
+            <point key="canvasLocation" x="4387" y="919"/>
         </scene>
         <!--Sub Menu View Controller-->
         <scene sceneID="LL0-1G-w9t">
@@ -1222,29 +1222,32 @@
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="dismissLogInScreen:" destination="Wdz-ys-j3L" eventType="touchUpInside" id="h1L-Jh-i9M"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWK-LO-r1U">
-                                                <rect key="frame" x="171" y="10" width="42" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="169.5" y="10" width="45" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="rWK-LO-r1U" firstAttribute="centerX" secondItem="J2E-TY-ye8" secondAttribute="centerX" id="7gM-IC-ifv"/>
                                             <constraint firstItem="rWK-LO-r1U" firstAttribute="top" secondItem="J2E-TY-ye8" secondAttribute="top" constant="10" id="94i-4A-TYm"/>
                                             <constraint firstAttribute="height" constant="40" id="9la-dk-mHl"/>
                                             <constraint firstItem="dda-cH-q7z" firstAttribute="top" secondItem="J2E-TY-ye8" secondAttribute="top" constant="5" id="JI6-uO-m6c"/>
                                             <constraint firstAttribute="bottom" secondItem="dda-cH-q7z" secondAttribute="bottom" constant="5" id="X8m-jH-Kzx"/>
-                                            <constraint firstItem="rWK-LO-r1U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dda-cH-q7z" secondAttribute="trailing" constant="118" id="ahF-Kx-fvg"/>
+                                            <constraint firstItem="rWK-LO-r1U" firstAttribute="leading" relation="lessThanOrEqual" secondItem="dda-cH-q7z" secondAttribute="trailing" constant="118" id="ahF-Kx-fvg"/>
                                             <constraint firstItem="dda-cH-q7z" firstAttribute="leading" secondItem="J2E-TY-ye8" secondAttribute="leading" constant="5" id="laU-oR-qJQ"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-tX-nAw" userLabel="Email View">
                                         <rect key="frame" x="20" y="80" width="344" height="41"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8aR-yA-jxC">
+                                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8aR-yA-jxC">
                                                 <rect key="frame" x="0.0" y="0.0" width="344" height="40"/>
                                                 <color key="backgroundColor" name="RealBlack"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1267,7 +1270,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="s5b-bU-vYx" userLabel="Password view">
                                         <rect key="frame" x="20" y="151" width="344" height="41"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15H-K5-URw" userLabel="Password">
+                                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="15H-K5-URw" userLabel="Password">
                                                 <rect key="frame" x="0.0" y="0.0" width="344" height="40"/>
                                                 <color key="backgroundColor" name="RealBlack"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1321,6 +1324,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logInPressed:" destination="Wdz-ys-j3L" eventType="touchUpInside" id="K7b-qV-7sL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="RealBlack"/>
@@ -1360,7 +1366,7 @@
                         <outlet property="cancelButton" destination="dda-cH-q7z" id="PDM-2P-atb"/>
                         <outlet property="emailTextField" destination="8aR-yA-jxC" id="nO9-fu-3YV"/>
                         <outlet property="logInViewContainer" destination="Epz-8K-OKz" id="jmn-CT-Ycg"/>
-                        <outlet property="passwordTextField" destination="15H-K5-URw" id="85b-8a-FuC"/>
+                        <outlet property="passwordTextField" destination="15H-K5-URw" id="F9E-5s-z0g"/>
                         <outlet property="pressedJoin" destination="xiY-i9-AvV" id="GVm-mP-SRT"/>
                     </connections>
                 </viewController>

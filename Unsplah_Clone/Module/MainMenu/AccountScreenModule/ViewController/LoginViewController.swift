@@ -15,9 +15,9 @@ class LoginViewController: UIViewController {
             StringColor.changeColor(textField: emailTextField, text: "Email", color: .gray)
         }
     }
-    @IBOutlet private weak var passwordTextfield: UITextField! {
+    @IBOutlet private weak var passwordTextField: UITextField! {
         didSet {
-            StringColor.changeColor(textField: passwordTextfield, text: "Password", color: .gray)
+            StringColor.changeColor(textField: passwordTextField, text: "Password", color: .gray)
         }
     }
     
@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
             ReusableComponent.addRadiusForButton(logInContainer)
         }
     }
+    
+    lazy var accountViewModel = AccountViewModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,18 +44,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func loginPressed(_ sender: UIButton) {
-        if let email = emailTextField.text, let password = passwordTextfield.text {
-            emailTextField.text = ""
-            passwordTextfield.text = ""
-                    Auth.auth().signIn(withEmail: email, password: password) { _, error in
-                        if let error = error {
-                            print(error)
-                            let alert = ReusableComponent.alertMessage(title: "Login Error", message: "Password or ID is invalid try again")
-                            self.present(alert, animated: true, completion: nil)
-                        } else {
-                            self.performSegue(withIdentifier: "CompleteLogIn", sender: nil)
-                        }
-                    }
-                }
+        accountViewModel.logIn(emailTextField: emailTextField, passwordTextField: passwordTextField, viewController: self)
+    }
+}
+extension LoginViewController: AccountViewModelDelegate {
+    func reload() {
+    }
+    
+    func show(error: AppError) {
     }
 }

@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-rb-1Ab" userLabel="Email View">
                                 <rect key="frame" x="20" y="97" width="374" height="41"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JML-sR-2c3">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JML-sR-2c3">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <color key="backgroundColor" name="RealBlack"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,7 +50,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0p5-Hm-9wF" userLabel="Password view">
                                 <rect key="frame" x="20" y="168" width="374" height="41"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nt-LW-lcq" userLabel="Password">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3nt-LW-lcq" userLabel="Password">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <color key="backgroundColor" name="RealBlack"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,7 +154,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="JML-sR-2c3" id="KpB-vM-Yfd"/>
                         <outlet property="logInContainer" destination="RL3-rv-TYL" id="C7q-VK-mAy"/>
-                        <outlet property="passwordTextfield" destination="3nt-LW-lcq" id="YHL-iY-xWc"/>
+                        <outlet property="passwordTextField" destination="3nt-LW-lcq" id="Gas-1J-l83"/>
                         <segue destination="Oco-Y2-ajZ" kind="show" identifier="CompleteLogIn" id="ssm-Gz-cbS"/>
                     </connections>
                 </viewController>
@@ -534,12 +534,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59W-sM-T6a">
-                                                    <rect key="frame" x="30" y="324.5" width="51.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Wo-Jg-Rtu">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
                                                     <constraints>
@@ -547,19 +541,25 @@
                                                         <constraint firstAttribute="width" constant="414" id="cNr-by-Kck"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxm-bk-06w">
+                                                    <rect key="frame" x="180.5" y="319" width="53" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" name="RealBlack"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="5Wo-Jg-Rtu" secondAttribute="bottom" id="2d8-YF-6Q4"/>
                                                 <constraint firstAttribute="trailing" secondItem="5Wo-Jg-Rtu" secondAttribute="trailing" id="4zN-4T-rdN"/>
-                                                <constraint firstItem="59W-sM-T6a" firstAttribute="leading" secondItem="WoR-Yo-XSF" secondAttribute="leadingMargin" constant="10" id="N80-x2-iWP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hxm-bk-06w" secondAttribute="bottom" constant="15" id="Rgc-Oz-cjh"/>
                                                 <constraint firstItem="5Wo-Jg-Rtu" firstAttribute="leading" secondItem="WoR-Yo-XSF" secondAttribute="leading" id="S0g-7K-iAL"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="59W-sM-T6a" secondAttribute="bottom" constant="10" id="XAy-iW-YxY"/>
+                                                <constraint firstItem="Hxm-bk-06w" firstAttribute="centerX" secondItem="WoR-Yo-XSF" secondAttribute="centerX" id="SVv-aZ-nUr"/>
                                                 <constraint firstItem="5Wo-Jg-Rtu" firstAttribute="top" secondItem="WoR-Yo-XSF" secondAttribute="top" id="znO-xp-faV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="authorLabel" destination="59W-sM-T6a" id="EBL-5n-k16"/>
+                                            <outlet property="authorLabel" destination="Hxm-bk-06w" id="H1Q-cJ-Ic9"/>
                                             <outlet property="photoImage" destination="5Wo-Jg-Rtu" id="YgD-Qr-oLf"/>
                                         </connections>
                                     </tableViewCell>
