@@ -26,6 +26,7 @@ struct Urls: Decodable {
     let regular: String?
     let small: String?
     let thumb: String?
+    let raw: String?
 }
 
 struct Link: Decodable {

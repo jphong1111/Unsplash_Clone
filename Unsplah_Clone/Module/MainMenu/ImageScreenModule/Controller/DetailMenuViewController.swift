@@ -58,7 +58,8 @@ class DetailMenuViewController: UIViewController {
         }
     }
     @IBAction private func downloadImage(_ sender: UIButton) {
-        detailViewModel.downloadImage(url: dataSource?.photoImageRegular ?? "")
+        detailViewModel.downloadImages(url: dataSource?.photoImageRegular ?? "")
+        self.present(ReusableComponent.alertMessage(title: "Download Complete", message: "Photo is downloaded to your photo library"), animated: true)
     }
     @IBAction private func shareLink(_ sender: UIBarButtonItem) {
         if let linkData = dataSource?.photoImageRegular {

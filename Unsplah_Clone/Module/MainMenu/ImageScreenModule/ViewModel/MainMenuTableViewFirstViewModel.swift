@@ -11,6 +11,7 @@ protocol MainMenuTableViewFirstViewModelProtocol {
     var photoImage: String { get }
     var photoImageSmall: String { get }
     var photoImageRegular: String { get }
+    var photoImageRaw: String { get }
     var author: String { get }
     var id: String { get }
 }
@@ -31,6 +32,9 @@ class MainMenuTableViewFirstViewModel: MainMenuTableViewFirstViewModelProtocol {
     }
     var photoImageRegular: String {
         photos.urls.regular ?? ""
+    }
+    var photoImageRaw: String {
+        photos.urls.raw ?? ""
     }
     var author: String {
         photos.user.name ?? " "

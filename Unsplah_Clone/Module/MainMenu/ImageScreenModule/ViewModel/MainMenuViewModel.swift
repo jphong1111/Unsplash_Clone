@@ -28,7 +28,7 @@ class MainMenuViewModel {
         self.delegate = delegate
     }
     func fetchPhoto() {
-        self.router.request(PhotoAPI.photoWithPage(page: "1")) { [weak self] (result: Result<[Photos], AppError>) in
+        self.router.request(PhotoAPI.photoWithPage(page: "2")) { [weak self] (result: Result<[Photos], AppError>) in
             switch result {
             case .success(let photos):
                 self?.dataSource = photos.compactMap { MainMenuTableViewFirstViewModel(photos: $0) }
