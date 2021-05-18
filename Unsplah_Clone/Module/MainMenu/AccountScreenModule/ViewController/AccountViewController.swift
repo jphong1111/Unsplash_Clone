@@ -23,6 +23,8 @@ class AccountViewController: UIViewController {
             self.segmentedControl.backgroundColor = Color.heavyGray.color
         }
     }
+    @IBOutlet private weak var cardImageView: UIImageView!
+    @IBOutlet private weak var heartCardImageView: UIImageView!
     @IBOutlet private weak var tableview: UITableView! {
         didSet {
             self.tableview.dataSource = self
@@ -62,24 +64,36 @@ extension AccountViewController: UITableViewDataSource {
         case 0:
             if viewModel.numberOfPhotoLow() == 0 {
                 self.tableview.isHidden = true
+                self.heartCardImageView.isHidden = true
+                self.cardImageView.isHidden = false
             } else {
                 self.tableview.isHidden = false
+                self.heartCardImageView.isHidden = true
+                self.cardImageView.isHidden = true
             }
             return viewModel.numberOfPhotoLow()
 
         case 1:
             if viewModel.numberOfLikeRow() == 0 {
                 self.tableview.isHidden = true
+                self.heartCardImageView.isHidden = false
+                self.cardImageView.isHidden = true
             } else {
                 self.tableview.isHidden = false
+                self.heartCardImageView.isHidden = true
+                self.cardImageView.isHidden = true
             }
             return viewModel.numberOfLikeRow()
             
         case 2:
             if viewModel.numberOfCollectionRow() == 0 {
                 self.tableview.isHidden = true
+                self.heartCardImageView.isHidden = true
+                self.cardImageView.isHidden = false
             } else {
                 self.tableview.isHidden = false
+                self.heartCardImageView.isHidden = true
+                self.cardImageView.isHidden = true
             }
             return viewModel.numberOfCollectionRow()
             
