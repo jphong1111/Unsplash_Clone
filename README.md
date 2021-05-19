@@ -33,7 +33,10 @@ If user didn't logged in, log in screen will pop up when user trying to collabor
 
 ## LogIn Screen
 
-<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/logInScreen.png" width = "200" height = "410" />
+
+User can log in with their email and password
+
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/LoginScreen.gif" width = "200" height = "405" />
 
 ## IDE
 
