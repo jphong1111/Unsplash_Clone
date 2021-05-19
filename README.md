@@ -33,10 +33,15 @@ If user didn't logged in, log in screen will pop up when user trying to collabor
 
 ## LogIn Screen
 
-
 User can log in with their email and password
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/LoginScreen.gif" width = "200" height = "405" />
+
+## SignUp Screen
+
+User can make a account for this app and actual data will store in Firebase
+
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/SignUpScreen.gif" width = "200" height = "405" />
 
 ## IDE
 
