@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var searchBar: UISearchBar! {
         didSet {
             self.searchBar.delegate = self
+            self.searchBar.searchTextField.clearButtonMode = .always
         }
     }
     @IBOutlet private weak var tableView: UITableView! {
@@ -95,6 +96,7 @@ extension SearchViewController: UITableViewDelegate {
 }
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         viewModel.fetchSearchPhoto(query: searchBar.text ?? "")
         viewModel.fetchSearchCollection(query: searchBar.text ?? "")
         viewModel.fetchSearchUser(query: searchBar.text ?? "")

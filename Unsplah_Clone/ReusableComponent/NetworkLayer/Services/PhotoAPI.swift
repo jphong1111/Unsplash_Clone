@@ -50,28 +50,28 @@ extension PhotoAPI: EndPointType {
                                        urlParameters: ["client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .photo:
-            return .requestParameters((bodyParameters: nil, urlParameters: ["client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            return .requestParameters((bodyParameters: nil, urlParameters: ["per_page": "20", "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .photoWithPage(let page):
-            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "per_page": "40", "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .photoID:
             return .requestParameters((bodyParameters: nil, urlParameters: ["client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .topics(let page):
-            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "per_page": "40", "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .topicsSearch(_, let page):
-            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "per_page": "40", "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .searchPhoto(let query, let page):
-            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "per_page": "40", "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .searchCollection(let query, let page):
-            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "per_page": "40", "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
             
         case .searchUser(let query, let page):
-            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
+            return .requestParameters((bodyParameters: nil, urlParameters: ["page": page, "per_page": "40", "query": query, "client_id": "2TZgdxa0VJ5bOq4Kbdd0ITUxRUgNN7Fk5kVm87EsloU"]))
         }
     }
 }

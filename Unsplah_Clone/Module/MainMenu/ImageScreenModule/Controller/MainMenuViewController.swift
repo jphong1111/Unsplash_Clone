@@ -37,6 +37,10 @@ class MainMenuViewController: UIViewController {
         getHeader()
         viewModel.fetchPhoto()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? DetailMenuViewController {
             destinationViewController.dataSource = viewModel.searchedPhoto(at: selectedCell)
@@ -67,6 +71,15 @@ extension MainMenuViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let headerView = self.tableView.tableHeaderView as? StretchyTableHeaderView else { fatalError("no header find") }
         headerView.scrollViewDidScroll(scrollView: scrollView)
+        let actualPosition = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+        
+        if actualPosition.y < 0 {
+            collectionView.isHidden = true
+            self.tabBarController?.tabBar.isHidden = false
+        } else {
+            collectionView.isHidden = false
+            self.tabBarController?.tabBar.isHidden = true
+        }
     }
 }
 extension MainMenuViewController: UICollectionViewDataSource {
