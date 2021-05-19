@@ -1,6 +1,10 @@
 # Unsplash_Clone
 Make a clone of Unsplash App with using Unsplash api. Integrate Firebase to make register & login
 
+## Preview 
+
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/main.gif" width = "200" height = "410" />
+
 ## Collaboration Screen
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/ThirdScreen.png" width = "200" height = "410" />
@@ -37,6 +41,9 @@ Third Party Library for this project
 
 - [SDWebImage](https://github.com/SDWebImage/SDWebImage)
 - [Firebase & Firestore](https://firebase.google.com/docs/ios/setup)
+- [Hero](https://github.com/HeroTransitions/Hero)
+- [IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager)
+
 
 ## Sources
 
