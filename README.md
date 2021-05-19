@@ -6,6 +6,10 @@ Make a clone of Unsplash App with using Unsplash api. Integrate Firebase to make
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/main.gif" width = "200" height = "410" />
 
+## Main Screen
+
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/MainScreen.gif" wdith = "200" height = "405" />
+
 ## Collaboration Screen
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/ThirdScreen.png" width = "200" height = "410" />
@@ -28,7 +32,9 @@ iOS Deployment Target: 13.0
 - Firestore
 - Delegation
 - UIkit
+- Hero Animation Tools
 - Protocol Oriented
+- App Screen Life Cycle
 
 ## API
 
