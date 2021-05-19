@@ -2,17 +2,26 @@
 Make a clone of Unsplash App with using Unsplash api. Integrate Firebase to make register & login
 
 ## Preview 
+
+### AppIcon
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/AppIcon.png" width = "150" height = "160"/>
 
-<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/main.gif" width = "200" height = "410" />
+### AppFlow
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/main.gif" width = "200" height = "405" />
 
 ## Main Screen
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/MainScreen.gif" wdith = "200" height = "405" />
 
+## Detail Screen
+
+If user didn't logged in, it will show up like this
+
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/DetailScreen.gif" width = "200" height = "405" />
+  
 ## Collaboration Screen
 
-<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/ThirdScreen.png" width = "200" height = "410" />
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/ThirdScreen.png" width = "200" height = "405" />
 
 ## LogIn Screen
 
