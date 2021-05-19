@@ -2,6 +2,7 @@
 Make a clone of Unsplash App with using Unsplash api. Integrate Firebase to make register & login
 
 ## Preview 
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/AppIcon.png" width = "50" height = "60"/>
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/main.gif" width = "200" height = "410" />
 
