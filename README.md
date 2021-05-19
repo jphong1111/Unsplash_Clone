@@ -29,6 +29,8 @@ User can search photos, collections, users based on keyword
 
 If user didn't logged in, log in screen will pop up when user trying to collaborate their pictures
 
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/Collaborate%20Screen.gif" width = "200" height = "405" />
+
 ## LogIn Screen
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/logInScreen.png" width = "200" height = "410" />
