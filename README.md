@@ -43,6 +43,10 @@ User can make a account for this app and actual data will store in Firebase
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/SignUpScreen.gif" width = "200" height = "405" />
 
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/FirebaseEmail.png"/>
+
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/FirebaseData.png"/>
+
 ## IDE
 
 Xcode 12.4
