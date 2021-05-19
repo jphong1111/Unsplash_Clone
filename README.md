@@ -15,6 +15,8 @@ Make a clone of Unsplash App with using Unsplash api. Integrate Firebase to make
 
 ## Detail Screen
 
+Use Hero Library to make a dynamic animation when user click photo
+
 If user didn't logged in, it will show up like this
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/DetailScreen.gif" width = "200" height = "405" />
