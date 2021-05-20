@@ -63,6 +63,7 @@ iOS Deployment Target: 13.0
 
 ## Techniques
 - Model-View-ViewModel(MVVM)
+- Custom Network Layer
 - Firebase
 - Firestore
 - Delegation
