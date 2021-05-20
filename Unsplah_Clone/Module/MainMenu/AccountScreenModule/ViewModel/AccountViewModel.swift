@@ -47,7 +47,7 @@ class AccountViewModel {
                     let alert = ReusableComponent.alertMessage(title: "Login Error", message: "Password or ID is invalid try again")
                     viewController.present(alert, animated: true, completion: nil)
                 } else {
-                    viewController.performSegue(withIdentifier: "CompleteLogIn", sender: nil)
+                    viewController.performSegue(withIdentifier: "CompletedLogIn", sender: nil)
                 }
             }
         }

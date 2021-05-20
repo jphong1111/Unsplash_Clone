@@ -36,6 +36,9 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "CompleteLogIn", sender: nil)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

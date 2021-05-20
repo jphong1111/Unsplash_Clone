@@ -37,6 +37,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,6 +97,7 @@ extension SearchViewController: UITableViewDelegate {
 }
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        tableView.isHidden = false
         searchBar.resignFirstResponder()
         viewModel.fetchSearchPhoto(query: searchBar.text ?? "")
         viewModel.fetchSearchCollection(query: searchBar.text ?? "")
@@ -109,5 +111,15 @@ extension SearchViewController: SearchViewModelDelegate {
     
     func show(error: AppError) {
         self.present(ReusableComponent.alertMessage(title: "Network Error", message: "Check your WIFI connection"), animated: true)
+    }
+}
+extension SearchViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let actualPosition = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+        if actualPosition.y < 0 {
+            self.tabBarController?.tabBar.isHidden = true
+        } else {
+            self.tabBarController?.tabBar.isHidden = false
+        }
     }
 }
