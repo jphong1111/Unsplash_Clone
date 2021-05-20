@@ -21,6 +21,10 @@ If user didn't logged in, it will show up like this
 
 <img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/DetailScreen.gif" width = "200" height = "405" />
   
+When user logged in, it will show like this
+
+<img src = "https://github.com/jphong1111/Unsplash_Clone/blob/main/githubImages/DetailScreenLoggedIn.gif" width = "200" height = "405" />
+
 ## Search Screen
 
 User can search photos, collections, users based on keyword
