@@ -42,7 +42,7 @@ class SubMenuViewController: UIViewController {
     }
     
     @IBAction private func visitWebsite(_ sender: UIButton) {
-        ReusableComponent.linkToUrl(url: "https://unsplash.com")
+        ReusableComponent.linkToUrl(url: "https://unsplash.com/")
     }
     
     @IBAction private func sendFeedback(_ sender: UIButton) {

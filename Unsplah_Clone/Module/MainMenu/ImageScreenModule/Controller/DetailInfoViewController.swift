@@ -10,27 +10,27 @@ import UIKit
 class DetailInfoViewController: UIViewController {
     @IBOutlet private weak var makeLabel: UILabel! {
         didSet {
-            self.makeLabel.text = dataSource?.make ?? ""
+            self.makeLabel.text = dataSource?.make ?? "Canon"
         }
     }
     @IBOutlet private weak var modelLabel: UILabel! {
         didSet {
-            self.modelLabel.text = dataSource?.model ?? ""
+            self.modelLabel.text = dataSource?.model ?? "Canon EOS 6D"
         }
     }
     @IBOutlet private weak var shutterSpeedLabel: UILabel! {
         didSet {
-            self.shutterSpeedLabel.text = "\(String(describing: dataSource?.exposureTime ?? ""))s"
+            self.shutterSpeedLabel.text = "\(String(describing: dataSource?.exposureTime ?? "10"))s"
         }
     }
     @IBOutlet private weak var apertureLabel: UILabel! {
         didSet {
-            self.apertureLabel.text = dataSource?.aperture ?? ""
+            self.apertureLabel.text = dataSource?.aperture ?? "7.1"
         }
     }
     @IBOutlet private weak var focalLengthLabel: UILabel! {
         didSet {
-            self.focalLengthLabel.text = dataSource?.focalLength ?? ""
+            self.focalLengthLabel.text = dataSource?.focalLength ?? "70"
         }
     }
     @IBOutlet private weak var isoLabel: UILabel! {

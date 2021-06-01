@@ -131,6 +131,7 @@
 		95986074264CA1B900C0C73C /* SearchUserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		95986078264D827F00C0C73C /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		95986080264D91FB00C0C73C /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		95A39D6226613EA800F07A1D /* Unsplah_Clone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Unsplah_Clone.entitlements; sourceTree = "<group>"; };
 		95AE9E9326459B19002D956F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		95AE9E9626459BD3002D956F /* MainMenuTableViewFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewFirstCell.xib; sourceTree = "<group>"; };
 		95AE9E9A26459CCA002D956F /* MainMenuTableViewSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewSecondCell.xib; sourceTree = "<group>"; };
@@ -491,6 +492,7 @@
 		95F00427264298BF004E85CF /* Unsplah_Clone */ = {
 			isa = PBXGroup;
 			children = (
+				95A39D6226613EA800F07A1D /* Unsplah_Clone.entitlements */,
 				95AE9EA62645A125002D956F /* ReusableComponent */,
 				95F0043F264298FC004E85CF /* Module */,
 				95F0043E264298E7004E85CF /* Storyboard */,
@@ -910,7 +912,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Unsplah_Clone/Unsplah_Clone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Unsplah_Clone/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -929,7 +933,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Unsplah_Clone/Unsplah_Clone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Unsplah_Clone/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

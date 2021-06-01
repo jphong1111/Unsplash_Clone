@@ -13,8 +13,8 @@ import UIKit
 class DetailMenuViewController: UIViewController {
     @IBOutlet private weak var detailImage: UIImageView! {
         didSet {
-            self.detailImage.sd_setImage(with: URL(string: dataSource?.photoImageRegular ?? ""))
-            self.detailImage.heroID = dataSource?.photoImageRegular
+            self.detailImage.sd_setImage(with: URL(string: dataSource?.photoImageSmall ?? ""))
+            self.detailImage.heroID = dataSource?.photoImageSmall
         }
     }
     

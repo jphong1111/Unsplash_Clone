@@ -17,15 +17,15 @@ class MainMenuTableViewFirstCell: UITableViewCell {
         self.nameLabel.text = configurator.author
         let blur = SDImageBlurTransformer(radius: 5.6)
         SDWebImageManager.shared.loadImage(
-            with: URL(string: configurator.photoImageRegular),
+            with: URL(string: configurator.photoImageSmall),
             options: [.fromLoaderOnly],
             context: [.storeCacheType: SDImageCacheType.none.rawValue, .imageTransformer: blur],
             progress: nil,
             completed: { _, _, _, _, _, _ in
                 // the `image` is resized
             })
-        self.photoImageView.sd_setImage(with: URL(string: configurator.photoImageRegular))
-        self.photoImageView.heroID = configurator.photoImageRegular
+        self.photoImageView.sd_setImage(with: URL(string: configurator.photoImageSmall))
+        self.photoImageView.heroID = configurator.photoImageSmall
     }
     
     private func getThumbImage(configurator: String, leaveGroup: DispatchGroup) {
